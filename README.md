@@ -9,6 +9,7 @@ Below a high-res screenshot, don't hesitate to open the image in a new tab to se
 ## List of enhanced language support
 Work is still in progress, pull requests are more than welcome here.
 
+* Cucumber features
 * CSS and Sass
 * Elixir
 * HTML

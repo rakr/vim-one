@@ -379,6 +379,21 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('DiffRemoved', s:hue_5, s:visual_grey, '')
   " }}}
 
+  " Cucumber highlighting ---------------------------------------------------{{{
+  call <sid>X('cucumberGiven',           s:hue_2,  '', '')
+  call <sid>X('cucumberWhen',            s:hue_2,  '', '')
+  call <sid>X('cucumberWhenAnd',         s:hue_2,  '', '')
+  call <sid>X('cucumberThen',            s:hue_2,  '', '')
+  call <sid>X('cucumberThenAnd',         s:hue_2,  '', '')
+  call <sid>X('cucumberUnparsed',        s:hue_6,  '', '')
+  call <sid>X('cucumberFeature',         s:hue_5,  '', 'bold')
+  call <sid>X('cucumberBackground',      s:hue_3,  '', 'bold')
+  call <sid>X('cucumberScenario',        s:hue_3,  '', 'bold')
+  call <sid>X('cucumberScenarioOutline', s:hue_3,  '', 'bold')
+  call <sid>X('cucumberTags',            s:mono_3, '', 'bold')
+  call <sid>X('cucumberDelimiter',       s:mono_3, '', 'bold')
+  " }}}
+
   " CSS/Sass highlighting ---------------------------------------------------{{{
   call <sid>X('cssAttrComma',         s:hue_3,  '', '')
   call <sid>X('cssAttributeSelector', s:hue_4,  '', '')
