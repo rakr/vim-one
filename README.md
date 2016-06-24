@@ -19,7 +19,7 @@ Work is still in progress, pull requests are more than welcome here.
 
 ## Installation
 
-You can use your preferred Vim Package Manager to install one.
+You can use your preferred Vim Package Manager to install **One**.
 
 ## Usage
 
