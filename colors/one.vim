@@ -380,6 +380,10 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   " }}}
 
   " Cucumber highlighting ---------------------------------------------------{{{
+  call <sid>X('asciidocListingBlock',   s:mono_2,  '', '')
+  " }}}
+
+  " Cucumber highlighting ---------------------------------------------------{{{
   call <sid>X('cucumberGiven',           s:hue_2,  '', '')
   call <sid>X('cucumberWhen',            s:hue_2,  '', '')
   call <sid>X('cucumberWhenAnd',         s:hue_2,  '', '')
