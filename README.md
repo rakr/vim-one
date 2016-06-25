@@ -30,11 +30,13 @@ As for the colorscheme, this theme comes with light and dark flavors.
 ## List of enhanced language support
 Work is still in progress, pull requests are more than welcome here.
 
+* Asciidoc
 * Cucumber features
 * CSS and Sass
 * Elixir
 * HTML
 * JavaScript, JSON
+* Markdown
 * Ruby
 * Vim
 * XML
