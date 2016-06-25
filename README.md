@@ -6,6 +6,27 @@ Below a high-res screenshot, don't hesitate to open the image in a new tab to se
 
 ![Vim One Screenshot][screenshot_global]
 
+## Vim Airline theme
+
+Add the following line to your `~/.vimrc` or `~/.config/nvim/init.vim`
+
+```vim
+let g:airline_theme='one'
+```
+
+As for the colorscheme, this theme comes with light and dark flavors.
+
+
+![Vim Airline Normal Dark][screenshot_normal_dark]
+![Vim Airline Insert Dark][screenshot_insert_dark]
+![Vim Airline Visual Dark][screenshot_visual_dark]
+![Vim Airline Replace Dark][screenshot_replace_dark]
+
+![Vim Airline Normal Light][screenshot_normal_light]
+![Vim Airline Insert Light][screenshot_insert_light]
+![Vim Airline Visual Light][screenshot_visual_light]
+![Vim Airline Replace Light][screenshot_replace_light]
+
 ## List of enhanced language support
 Work is still in progress, pull requests are more than welcome here.
 
@@ -46,4 +67,12 @@ if (empty($TMUX))
 endif
 ```
 
-[screenshot_global]: vim-one.png
+[screenshot_global]: screenshots/vim-one.png
+[screenshot_normal_dark]: screenshots/normal-dark.png
+[screenshot_insert_dark]: screenshots/insert-dark.png
+[screenshot_visual_dark]: screenshots/visual-dark.png
+[screenshot_replace_dark]: screenshots/replace-dark.png
+[screenshot_normal_light]: screenshots/normal-light.png
+[screenshot_insert_light]: screenshots/insert-light.png
+[screenshot_visual_light]: screenshots/visual-light.png
+[screenshot_replace_light]: screenshots/replace-light.png
