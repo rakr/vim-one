@@ -294,7 +294,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('CursorColumn', '',             s:syntax_cursor,        '')
   call <sid>X('CursorLine',   '',             s:syntax_cursor,        '')
   call <sid>X('Directory',    s:hue_2,         '',                        '')
-  call <sid>X('ErrorMsg',     s:hue_5,        s:syntax_fg,                        '')
+  call <sid>X('ErrorMsg',     '',        s:hue_5,                        '')
   call <sid>X('VertSplit',    s:vertsplit,    '',                        'none')
   call <sid>X('Folded',       s:syntax_bg,    s:syntax_fold_bg,          '')
   call <sid>X('FoldColumn',   '',             s:mono_3, '')
@@ -364,7 +364,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('Underlined',     '',             '',       '')
   call <sid>X('Ignore',         '',             '',       '')
   call <sid>X('Error',          s:hue_5,        s:syntax_bg, 'bold')
-  call <sid>X('Todo',           s:hue_3,      '',       '')
+  call <sid>X('Todo',           s:hue_4,      s:syntax_bg,       '')
   " }}}
 
   " Diff highlighting -------------------------------------------------------{{{
