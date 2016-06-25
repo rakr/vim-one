@@ -286,85 +286,85 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   "}}}
 
   " Vim editor color --------------------------------------------------------{{{
-  call <sid>X('bold',         '',             '',                        'bold')
-  call <sid>X('ColorColumn',  '',             s:syntax_cursor,        '')
-  call <sid>X('Conceal',      '',             '',                        '')
-  call <sid>X('Cursor',       s:syntax_bg,    s:hue_2,                    '')
-  call <sid>X('CursorIM',     '',             '',                        '')
-  call <sid>X('CursorColumn', '',             s:syntax_cursor,        '')
-  call <sid>X('CursorLine',   '',             s:syntax_cursor,        '')
-  call <sid>X('Directory',    s:hue_2,         '',                        '')
-  call <sid>X('ErrorMsg',     '',        s:hue_5,                        '')
-  call <sid>X('VertSplit',    s:vertsplit,    '',                        'none')
-  call <sid>X('Folded',       s:syntax_bg,    s:syntax_fold_bg,          '')
-  call <sid>X('FoldColumn',   '',             s:mono_3, '')
-  call <sid>X('IncSearch',    s:syntax_bg,    s:hue_6_2,                  '')
-  call <sid>X('LineNr',       s:syntax_gutter,  '',                        '')
-  call <sid>X('CursorLineNr', s:syntax_fg,      '',                        'none')
-  call <sid>X('MatchParen',   s:syntax_bg,    s:hue_5,                     '')
-  call <sid>X('Italic',       '',             '',                        'italic')
-  call <sid>X('ModeMsg',      s:syntax_fg,    '',                        '')
-  call <sid>X('MoreMsg',      s:syntax_fg,    '',                        '')
-  call <sid>X('NonText',      s:mono_3, '',                        '')
-  call <sid>X('PMenu',        '',             s:visual_grey,             '')
-  call <sid>X('PMenuSel',     '',             s:syntax_bg,               '')
-  call <sid>X('PMenuSbar',    '',             s:syntax_bg,               '')
-  call <sid>X('PMenuThumb',   '',             s:mono_1,                   '')
-  call <sid>X('Question',     s:hue_2,  '',                        '')
-  call <sid>X('Search',       s:syntax_bg,    s:hue_6_2,                  '')
-  call <sid>X('SpecialKey',   s:special_grey, '',                        '')
-  call <sid>X('StatusLine',   s:syntax_fg,    s:syntax_cursor,        'none')
-  call <sid>X('StatusLineNC', s:mono_3, '', '')
-  call <sid>X('TabLine',      s:mono_3, '', '')
-  call <sid>X('TabLineFill',  '', '', 'none')
-  call <sid>X('TabLineSel',   s:syntax_fg, '', '')
-  call <sid>X('Title',        s:hue_4,  '',                        'none')
-  call <sid>X('Visual',       '',             s:visual_grey,             '')
-  call <sid>X('VisualNOS',    '',             s:visual_grey,             '')
-  call <sid>X('WarningMsg',   s:hue_5,   '',                        '')
-  call <sid>X('TooLong',      s:hue_5,          '',                        '')
-  call <sid>X('WildMenu',     s:syntax_fg,   s:mono_3,                        '')
-  call <sid>X('Normal',       s:syntax_fg,    s:syntax_bg,               '')
-  call <sid>X('SignColumn',   '', s:mono_3, '')
-  call <sid>X('Special',      s:hue_2,         '',                        '')
+  call <sid>X('bold',         '',              '',               'bold')
+  call <sid>X('ColorColumn',  '',              s:syntax_cursor,  '')
+  call <sid>X('Conceal',      '',              '',               '')
+  call <sid>X('Cursor',       s:syntax_bg,     s:hue_2,          '')
+  call <sid>X('CursorIM',     '',              '',               '')
+  call <sid>X('CursorColumn', '',              s:syntax_cursor,  '')
+  call <sid>X('CursorLine',   '',              s:syntax_cursor,  '')
+  call <sid>X('Directory',    s:hue_2,         '',               '')
+  call <sid>X('ErrorMsg',     '',              s:hue_5,          '')
+  call <sid>X('VertSplit',    s:vertsplit,     '',               'none')
+  call <sid>X('Folded',       s:syntax_bg,     s:syntax_fold_bg, '')
+  call <sid>X('FoldColumn',   '',              s:mono_3,         '')
+  call <sid>X('IncSearch',    s:syntax_bg,     s:hue_6_2,        '')
+  call <sid>X('LineNr',       s:syntax_gutter, '',               '')
+  call <sid>X('CursorLineNr', s:syntax_fg,     '',               'none')
+  call <sid>X('MatchParen',   s:syntax_bg,     s:hue_5,          '')
+  call <sid>X('Italic',       '',              '',               'italic')
+  call <sid>X('ModeMsg',      s:syntax_fg,     '',               '')
+  call <sid>X('MoreMsg',      s:syntax_fg,     '',               '')
+  call <sid>X('NonText',      s:mono_3,        '',               '')
+  call <sid>X('PMenu',        '',              s:visual_grey,    '')
+  call <sid>X('PMenuSel',     '',              s:syntax_bg,      '')
+  call <sid>X('PMenuSbar',    '',              s:syntax_bg,      '')
+  call <sid>X('PMenuThumb',   '',              s:mono_1,         '')
+  call <sid>X('Question',     s:hue_2,         '',               '')
+  call <sid>X('Search',       s:syntax_bg,     s:hue_6_2,        '')
+  call <sid>X('SpecialKey',   s:special_grey,  '',               '')
+  call <sid>X('StatusLine',   s:syntax_fg,     s:syntax_cursor,  'none')
+  call <sid>X('StatusLineNC', s:mono_3,        '',               '')
+  call <sid>X('TabLine',      s:mono_3,        '',               '')
+  call <sid>X('TabLineFill',  '',              '',               'none')
+  call <sid>X('TabLineSel',   s:syntax_fg,     '',               '')
+  call <sid>X('Title',        s:hue_4,         '',               'none')
+  call <sid>X('Visual',       '',              s:visual_grey,    '')
+  call <sid>X('VisualNOS',    '',              s:visual_grey,    '')
+  call <sid>X('WarningMsg',   s:hue_5,         '',               '')
+  call <sid>X('TooLong',      s:hue_5,         '',               '')
+  call <sid>X('WildMenu',     s:syntax_fg,     s:mono_3,         '')
+  call <sid>X('Normal',       s:syntax_fg,     s:syntax_bg,      '')
+  call <sid>X('SignColumn',   '',              s:mono_3,         '')
+  call <sid>X('Special',      s:hue_2,         '',               '')
   " }}}
 
   " Standard syntax highlighting --------------------------------------------{{{
-  call <sid>X('Comment',        s:mono_3, '',       'italic')
-  call <sid>X('Constant',       s:hue_4,         '',       '')
-  call <sid>X('String',         s:hue_4,        '',       '')
-  call <sid>X('Character',      s:hue_4,        '',       '')
-  call <sid>X('Number',         s:hue_6,  '',       '')
-  call <sid>X('Boolean',        s:hue_6,  '',       '')
-  call <sid>X('Float',          s:hue_6,  '',       '')
-  call <sid>X('Identifier',     s:hue_5,          '',       'none')
-  call <sid>X('Function',       s:hue_2,         '',       '')
-  call <sid>X('Statement',      s:hue_3,      '',       'none')
-  call <sid>X('Conditional',    s:hue_3,      '',       '')
-  call <sid>X('Repeat',         s:hue_3,      '',       '')
-  call <sid>X('Label',          s:hue_3,      '',       '')
-  call <sid>X('Operator',       '',             '',       'none')
-  call <sid>X('Keyword',        s:hue_5,          '',       '')
-  call <sid>X('Exception',      s:hue_3,      '',       '')
-  call <sid>X('PreProc',        s:hue_6_2,       '',       '')
-  call <sid>X('Include',        s:hue_2,         '',       '')
-  call <sid>X('Define',         s:hue_3,      '',       'none')
-  call <sid>X('Macro',          s:hue_3,      '',       '')
-  call <sid>X('PreCondit',      s:hue_6_2,       '',       '')
-  call <sid>X('Type',           s:hue_6_2,       '',       'none')
-  call <sid>X('StorageClass',   s:hue_6_2,       '',       '')
-  call <sid>X('Structure',      s:hue_6_2,       '',       '')
-  call <sid>X('Typedef',        s:hue_6_2,       '',       '')
-  call <sid>X('Special',        s:hue_2,         '',       '')
-  call <sid>X('SpecialChar',    '',             '',       '')
-  call <sid>X('Tag',            '',             '',       '')
-  call <sid>X('Delimiter',      '',             '',       '')
-  call <sid>X('SpecialComment', '',             '',       '')
-  call <sid>X('Debug',          '',             '',       '')
-  call <sid>X('Underlined',     '',             '',       '')
-  call <sid>X('Ignore',         '',             '',       '')
-  call <sid>X('Error',          s:hue_5,        s:syntax_bg, 'bold')
-  call <sid>X('Todo',           s:hue_4,      s:syntax_bg,       '')
+  call <sid>X('Comment',        s:mono_3,  '',          'italic')
+  call <sid>X('Constant',       s:hue_4,   '',          '')
+  call <sid>X('String',         s:hue_4,   '',          '')
+  call <sid>X('Character',      s:hue_4,   '',          '')
+  call <sid>X('Number',         s:hue_6,   '',          '')
+  call <sid>X('Boolean',        s:hue_6,   '',          '')
+  call <sid>X('Float',          s:hue_6,   '',          '')
+  call <sid>X('Identifier',     s:hue_5,   '',          'none')
+  call <sid>X('Function',       s:hue_2,   '',          '')
+  call <sid>X('Statement',      s:hue_3,   '',          'none')
+  call <sid>X('Conditional',    s:hue_3,   '',          '')
+  call <sid>X('Repeat',         s:hue_3,   '',          '')
+  call <sid>X('Label',          s:hue_3,   '',          '')
+  call <sid>X('Operator',       '',        '',          'none')
+  call <sid>X('Keyword',        s:hue_5,   '',          '')
+  call <sid>X('Exception',      s:hue_3,   '',          '')
+  call <sid>X('PreProc',        s:hue_6_2, '',          '')
+  call <sid>X('Include',        s:hue_2,   '',          '')
+  call <sid>X('Define',         s:hue_3,   '',          'none')
+  call <sid>X('Macro',          s:hue_3,   '',          '')
+  call <sid>X('PreCondit',      s:hue_6_2, '',          '')
+  call <sid>X('Type',           s:hue_6_2, '',          'none')
+  call <sid>X('StorageClass',   s:hue_6_2, '',          '')
+  call <sid>X('Structure',      s:hue_6_2, '',          '')
+  call <sid>X('Typedef',        s:hue_6_2, '',          '')
+  call <sid>X('Special',        s:hue_2,   '',          '')
+  call <sid>X('SpecialChar',    '',        '',          '')
+  call <sid>X('Tag',            '',        '',          '')
+  call <sid>X('Delimiter',      '',        '',          '')
+  call <sid>X('SpecialComment', '',        '',          '')
+  call <sid>X('Debug',          '',        '',          '')
+  call <sid>X('Underlined',     '',        '',          '')
+  call <sid>X('Ignore',         '',        '',          '')
+  call <sid>X('Error',          s:hue_5,   s:syntax_bg, 'bold')
+  call <sid>X('Todo',           s:hue_4,   s:syntax_bg, '')
   " }}}
 
   " Diff highlighting -------------------------------------------------------{{{
@@ -435,14 +435,14 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   " }}}
 
   " Elixir highlighting------------------------------------------------------{{{
-  call <sid>X('elixirBlockDefinition',     s:hue_3, '', '')
-  call <sid>X('elixirAtom',     s:hue_1, '', '')
+  call <sid>X('elixirBlockDefinition', s:hue_3, '', '')
+  call <sid>X('elixirAtom',            s:hue_1, '', '')
   " }}}
 
   " HTML highlighting -------------------------------------------------------{{{
-  call <sid>X('htmlTagName',    s:hue_5, '', '')
-  call <sid>X('htmlSpecialTagName',    s:hue_5, '', '')
-  call <sid>X('htmlTag',        s:mono_3, '', '')
+  call <sid>X('htmlTagName',        s:hue_5,  '', '')
+  call <sid>X('htmlSpecialTagName', s:hue_5,  '', '')
+  call <sid>X('htmlTag',            s:mono_3, '', '')
   " }}}
 
   " JavaScript highlighting -------------------------------------------------{{{
@@ -537,13 +537,13 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('gitcommitSelectedFile',  s:hue_4,   '', '')
   call <sid>X('gitcommitUnmergedFile',  s:hue_6_2, '', '')
   call <sid>X('gitcommitFile',          '',        '', '')
-  hi link gitcommitNoBranch gitcommitBranch
-  hi link gitcommitUntracked gitcommitComment
-  hi link gitcommitDiscarded gitcommitComment
-  hi link gitcommitSelected gitcommitComment
+  hi link gitcommitNoBranch       gitcommitBranch
+  hi link gitcommitUntracked      gitcommitComment
+  hi link gitcommitDiscarded      gitcommitComment
+  hi link gitcommitSelected       gitcommitComment
   hi link gitcommitDiscardedArrow gitcommitDiscardedFile
-  hi link gitcommitSelectedArrow gitcommitSelectedFile
-  hi link gitcommitUnmergedArrow gitcommitUnmergedFile
+  hi link gitcommitSelectedArrow  gitcommitSelectedFile
+  hi link gitcommitUnmergedArrow  gitcommitUnmergedFile
 
   call <sid>X('SignifySignAdd',    s:hue_4,   '', '')
   call <sid>X('SignifySignChange', s:hue_6_2, '', '')
@@ -551,8 +551,8 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   hi link GitGutterAdd    SignifySignAdd
   hi link GitGutterChange SignifySignChange
   hi link GitGutterDelete SignifySignDelete
-  call <sid>X('diffAdded',   s:hue_4, '', '')
-  call <sid>X('diffRemoved', s:hue_5, '', '')
+  call <sid>X('diffAdded',         s:hue_4,   '', '')
+  call <sid>X('diffRemoved',       s:hue_5,   '', '')
   " }}}
 
   " XML highlighting --------------------------------------------------------{{{
