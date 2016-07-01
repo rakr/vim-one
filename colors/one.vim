@@ -12,6 +12,10 @@ syntax reset
 "endif
 let g:colors_name = 'one'
 
+if !exists("g:one_allow_italics")
+  let g:one_allow_italics = 0
+endif
+
 if has('gui_running') || &t_Co == 88 || &t_Co == 256
   " functions
   " returns an approximate grey index for the given grey level
@@ -212,6 +216,11 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
 
   " sets the highlighting for the given group
   fun <SID>X(group, fg, bg, attr)
+    let l:attr = a:attr
+    if g:one_allow_italics == 0 && l:attr ==? 'italic'
+        let l:attr= 'none'
+    endif
+
     if a:fg !=? ''
       exec 'hi ' . a:group . ' guifg=#' . a:fg . ' ctermfg=' . <SID>rgb(a:fg)
     endif
@@ -219,7 +228,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
       exec 'hi ' . a:group . ' guibg=#' . a:bg . ' ctermbg=' . <SID>rgb(a:bg)
     endif
     if a:attr !=? ''
-      exec 'hi ' . a:group . ' gui=' . a:attr . ' cterm=' . a:attr
+      exec 'hi ' . a:group . ' gui=' . l:attr . ' cterm=' . l:attr
     endif
   endfun
 
