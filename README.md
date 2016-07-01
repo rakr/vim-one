@@ -67,7 +67,10 @@ let g:one_allow_italics = 1 " I love italic for comments
 colorscheme one
 ```
 
+iTerm2 can support italic, follow the instructions given in this [blog post by Alex Pearce](https://alexpearce.me/2014/05/italics-in-iterm2-vim-tmux/).
+Make sure to read the update if you are using tmux version 2.1 or above.
 
+### True color support
 To benefit from the **true color** support make sure to add the following lines in your `.vimrc` or `.config/nvim/init.vim`
 
 ```vim
@@ -92,6 +95,11 @@ set background=dark " for the dark version
 " set background=light " for the light version
 colorscheme one
 ```
+
+I've tested the following setup on a Mac:
+* iTerm2 nightly build
+* Neovim 0.1.4 and 0.1.5-dev
+* Vim 7.4.1952
 
 [screenshot_global]: screenshots/vim-one.png
 [screenshot_normal_dark]: screenshots/normal-dark.png
