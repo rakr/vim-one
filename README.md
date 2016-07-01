@@ -49,6 +49,12 @@ You can use your preferred Vim Package Manager to install **One**.
 
 **One** comes in two flavors: light and dark, make sure to properly set your `background` before setting the colorscheme.
 
+```vim
+set background=dark " for the dark version
+" set background=light " for the light version
+colorscheme one
+```
+
 To benefit from the **true color** support make sure to add the following lines in your `.vimrc` or `.config/nvim/init.vim`
 
 ```vim
@@ -67,6 +73,11 @@ if (empty($TMUX))
     set termguicolors
   endif
 endif
+
+
+set background=dark " for the dark version
+" set background=light " for the light version
+colorscheme one
 ```
 
 [screenshot_global]: screenshots/vim-one.png
