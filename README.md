@@ -55,6 +55,19 @@ set background=dark " for the dark version
 colorscheme one
 ```
 
+### Italic support
+
+Some terminals do not support italic, cf. #3.
+
+If your terminal does support _italic_, you can set the `g:one_allow_italics` variable to 1 in your `.vimrc` or `.config/nvim/init.vim`:
+
+```vim
+set background=light        " for the light version
+let g:one_allow_italics = 1 " I love italic for comments
+colorscheme one
+```
+
+
 To benefit from the **true color** support make sure to add the following lines in your `.vimrc` or `.config/nvim/init.vim`
 
 ```vim
