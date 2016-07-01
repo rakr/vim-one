@@ -57,7 +57,7 @@ colorscheme one
 
 ### Italic support
 
-Some terminals do not support italic, cf. #3.
+Some terminals do not support italic, cf. [#3][issue_3].
 
 If your terminal does support _italic_, you can set the `g:one_allow_italics` variable to 1 in your `.vimrc` or `.config/nvim/init.vim`:
 
@@ -102,3 +102,5 @@ colorscheme one
 [screenshot_insert_light]: screenshots/insert-light.png
 [screenshot_visual_light]: screenshots/visual-light.png
 [screenshot_replace_light]: screenshots/replace-light.png
+
+[issue_3]: https://github.com/rakr/vim-one/issues/3
