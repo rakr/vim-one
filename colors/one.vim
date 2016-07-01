@@ -380,7 +380,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('DiffRemoved', s:hue_5, s:visual_grey, '')
   " }}}
 
-  " Cucumber highlighting ---------------------------------------------------{{{
+  " Asciidoc highlighting ---------------------------------------------------{{{
   call <sid>X('asciidocListingBlock',   s:mono_2,  '', '')
   " }}}
 
