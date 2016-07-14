@@ -520,8 +520,10 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   " }}}
 
   " Ruby highlighting -------------------------------------------------------{{{
+  call <sid>X('rubyBlock',                     s:hue_3,   '', '')
   call <sid>X('rubyBlockParameter',            s:hue_5,   '', '')
   call <sid>X('rubyBlockParameterList',        s:hue_5,   '', '')
+  call <sid>X('rubyCapitalizedMethod',         s:hue_3,   '', '')
   call <sid>X('rubyClass',                     s:hue_3,   '', '')
   call <sid>X('rubyConstant',                  s:hue_6_2, '', '')
   call <sid>X('rubyControl',                   s:hue_3,   '', '')
@@ -532,7 +534,6 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('rubyIncluderubyGlobalVariable', s:hue_5,   '', '')
   call <sid>X('rubyInstanceVariable',          s:hue_5,   '', '')
   call <sid>X('rubyInterpolation',             s:hue_1,   '', '')
-  call <sid>X('rubyInterpolationDelimiter',    s:hue_5,   '', '')
   call <sid>X('rubyInterpolationDelimiter',    s:hue_5,   '', '')
   call <sid>X('rubyRegexp',                    s:hue_1,   '', '')
   call <sid>X('rubyRegexpDelimiter',           s:hue_1,   '', '')
