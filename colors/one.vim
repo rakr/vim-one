@@ -448,6 +448,11 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('sassMixing',         s:hue_3,   '', '')
   " }}}
 
+  " Go highlighting ---------------------------------------------------------{{{
+  call <sid>X('goDeclaration',         s:hue_3, '', '')
+  call <sid>X('goType',                s:hue_3, '', '')
+  " }}}
+
   " Elixir highlighting------------------------------------------------------{{{
   call <sid>X('elixirBlockDefinition', s:hue_3, '', '')
   call <sid>X('elixirAtom',            s:hue_1, '', '')
@@ -574,6 +579,13 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   hi link GitGutterDelete SignifySignDelete
   call <sid>X('diffAdded',         s:hue_4,   '', '')
   call <sid>X('diffRemoved',       s:hue_5,   '', '')
+  " }}}
+
+  " Markdown highlighting ---------------------------------------------------{{{
+  call <sid>X('markdownUrl',              s:mono_3, '', '')
+  call <sid>X('markdownCode',             s:hue_5,  '', '')
+  call <sid>X('markdownHeadingDelimiter', s:mono_3, '', '')
+  call <sid>X('markdownListMarker',       s:mono_3, '', '')
   " }}}
 
   " XML highlighting --------------------------------------------------------{{{
