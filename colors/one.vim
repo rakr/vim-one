@@ -12,7 +12,7 @@ syntax reset
 "endif
 let g:colors_name = 'one'
 
-if !exists("g:one_allow_italics")
+if !exists('g:one_allow_italics')
   let g:one_allow_italics = 0
 endif
 
