@@ -584,6 +584,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   " Markdown highlighting ---------------------------------------------------{{{
   call <sid>X('markdownUrl',              s:mono_3, '', '')
   call <sid>X('markdownCode',             s:hue_5,  '', '')
+  call <sid>X('markdownCodeBlock',        s:hue_5,  '', '')
   call <sid>X('markdownHeadingDelimiter', s:mono_3, '', '')
   call <sid>X('markdownListMarker',       s:mono_3, '', '')
   " }}}
