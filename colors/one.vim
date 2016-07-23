@@ -374,7 +374,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('Underlined',     '',        '',          '')
   call <sid>X('Ignore',         '',        '',          '')
   call <sid>X('Error',          s:hue_5,   s:syntax_bg, 'bold')
-  call <sid>X('Todo',           s:hue_4,   s:syntax_bg, '')
+  call <sid>X('Todo',           s:hue_3,   s:syntax_bg, '')
   " }}}
 
   " Diff highlighting -------------------------------------------------------{{{
@@ -450,7 +450,10 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
 
   " Go highlighting ---------------------------------------------------------{{{
   call <sid>X('goDeclaration',         s:hue_3, '', '')
+  call <sid>X('goField',               s:hue_5, '', '')
+  call <sid>X('goMethod',              s:hue_1, '', '')
   call <sid>X('goType',                s:hue_3, '', '')
+  call <sid>X('goUnsignedInts',        s:hue_1, '', '')
   " }}}
 
   " Elixir highlighting------------------------------------------------------{{{
