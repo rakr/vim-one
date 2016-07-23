@@ -31,6 +31,8 @@ As for the colorscheme, this theme comes with light and dark flavors.
 ## List of enhanced language support
 
 Pull requests are more than welcome here.
+I have created few issues to provide a bare bone roadmap for this color
+scheme.
 
 ### Stable
 
