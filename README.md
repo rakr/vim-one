@@ -29,19 +29,25 @@ As for the colorscheme, this theme comes with light and dark flavors.
 ![Vim Airline Replace Light][screenshot_replace_light]
 
 ## List of enhanced language support
-Work is still in progress, pull requests are more than welcome here.
+
+Pull requests are more than welcome here.
+
+### Stable
 
 * Asciidoc
 * Cucumber features
 * CSS and Sass
 * Elixir
-* Go (in progress)
 * HTML
 * JavaScript, JSON
 * Markdown
 * Ruby
 * Vim
 * XML
+
+### In progress
+
+* Go
 
 ## Installation
 
