@@ -1,8 +1,7 @@
-# Vim-One colorscheme
+![Logo][logo]
 
 Light and dark vim colorscheme, shamelessly stolen from atom (another excellent text editor). **One** is best suited for GUI but does fallback gracefully and automatically if your environment does not support true colors.
 
-Below a high-res screenshot, don't hesitate to open the image in a new tab to see all the details.
 
 ![Vim One Screenshot][screenshot_global]
 
@@ -96,12 +95,15 @@ set background=dark " for the dark version
 colorscheme one
 ```
 
+
 I've tested the following setup on a Mac:
+
 * iTerm2 nightly build
 * Neovim 0.1.4 and 0.1.5-dev
 * Vim 7.4.1952
 
-[screenshot_global]: screenshots/vim-one.png
+[logo]: screenshots/logo.png
+[screenshot_global]: screenshots/one.png
 [screenshot_normal_dark]: screenshots/normal-dark.png
 [screenshot_insert_dark]: screenshots/insert-dark.png
 [screenshot_visual_dark]: screenshots/visual-dark.png
