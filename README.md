@@ -35,6 +35,7 @@ Work is still in progress, pull requests are more than welcome here.
 * Cucumber features
 * CSS and Sass
 * Elixir
+* Go (in progress)
 * HTML
 * JavaScript, JSON
 * Markdown
