@@ -46,10 +46,12 @@ scheme.
 * Ruby
 * Vim
 * XML
+* Go
 
 ### In progress
 
-* Go
+* Jade
+
 
 ## Installation
 
