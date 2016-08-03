@@ -448,17 +448,48 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('sassMixing',         s:hue_3,   '', '')
   " }}}
 
+  " Elixir highlighting------------------------------------------------------{{{
+  call <sid>X('elixirBlockDefinition', s:hue_3, '', '')
+  call <sid>X('elixirAtom',            s:hue_1, '', '')
+  " }}}
+
+  " Git and git related plugins highlighting --------------------------------{{{
+  call <sid>X('gitcommitComment',       s:mono_3,  '', '')
+  call <sid>X('gitcommitUnmerged',      s:hue_4,   '', '')
+  call <sid>X('gitcommitOnBranch',      '',        '', '')
+  call <sid>X('gitcommitBranch',        s:hue_3,   '', '')
+  call <sid>X('gitcommitDiscardedType', s:hue_5,   '', '')
+  call <sid>X('gitcommitSelectedType',  s:hue_4,   '', '')
+  call <sid>X('gitcommitHeader',        '',        '', '')
+  call <sid>X('gitcommitUntrackedFile', s:hue_1,   '', '')
+  call <sid>X('gitcommitDiscardedFile', s:hue_5,   '', '')
+  call <sid>X('gitcommitSelectedFile',  s:hue_4,   '', '')
+  call <sid>X('gitcommitUnmergedFile',  s:hue_6_2, '', '')
+  call <sid>X('gitcommitFile',          '',        '', '')
+  hi link gitcommitNoBranch       gitcommitBranch
+  hi link gitcommitUntracked      gitcommitComment
+  hi link gitcommitDiscarded      gitcommitComment
+  hi link gitcommitSelected       gitcommitComment
+  hi link gitcommitDiscardedArrow gitcommitDiscardedFile
+  hi link gitcommitSelectedArrow  gitcommitSelectedFile
+  hi link gitcommitUnmergedArrow  gitcommitUnmergedFile
+
+  call <sid>X('SignifySignAdd',    s:hue_4,   '', '')
+  call <sid>X('SignifySignChange', s:hue_6_2, '', '')
+  call <sid>X('SignifySignDelete', s:hue_5,   '', '')
+  hi link GitGutterAdd    SignifySignAdd
+  hi link GitGutterChange SignifySignChange
+  hi link GitGutterDelete SignifySignDelete
+  call <sid>X('diffAdded',         s:hue_4,   '', '')
+  call <sid>X('diffRemoved',       s:hue_5,   '', '')
+  " }}}
+
   " Go highlighting ---------------------------------------------------------{{{
   call <sid>X('goDeclaration',         s:hue_3, '', '')
   call <sid>X('goField',               s:hue_5, '', '')
   call <sid>X('goMethod',              s:hue_1, '', '')
   call <sid>X('goType',                s:hue_3, '', '')
   call <sid>X('goUnsignedInts',        s:hue_1, '', '')
-  " }}}
-
-  " Elixir highlighting------------------------------------------------------{{{
-  call <sid>X('elixirBlockDefinition', s:hue_3, '', '')
-  call <sid>X('elixirAtom',            s:hue_1, '', '')
   " }}}
 
   " HTML highlighting -------------------------------------------------------{{{
@@ -527,6 +558,24 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('jsonSemicolonError',    s:hue_5,  '', 'reverse' )
   " }}}
 
+  " Markdown highlighting ---------------------------------------------------{{{
+  call <sid>X('markdownUrl',              s:mono_3,  '', '')
+  call <sid>X('markdownBold',             s:hue_6,   '', 'bold')
+  call <sid>X('markdownItalic',           s:hue_6,   '', 'bold')
+  call <sid>X('markdownCode',             s:hue_4,   '', '')
+  call <sid>X('markdownCodeBlock',        s:hue_5,   '', '')
+  call <sid>X('markdownCodeDelimiter',    s:hue_4,   '', '')
+  call <sid>X('markdownHeadingDelimiter', s:hue_5_2, '', '')
+  call <sid>X('markdownH1',               s:hue_5,   '', '')
+  call <sid>X('markdownH2',               s:hue_5,   '', '')
+  call <sid>X('markdownH3',               s:hue_5,   '', '')
+  call <sid>X('markdownH3',               s:hue_5,   '', '')
+  call <sid>X('markdownH4',               s:hue_5,   '', '')
+  call <sid>X('markdownH5',               s:hue_5,   '', '')
+  call <sid>X('markdownH6',               s:hue_5,   '', '')
+  call <sid>X('markdownListMarker',       s:hue_5,   '', '')
+  " }}}
+
   " Ruby highlighting -------------------------------------------------------{{{
   call <sid>X('rubyBlock',                     s:hue_3,   '', '')
   call <sid>X('rubyBlockParameter',            s:hue_5,   '', '')
@@ -553,60 +602,11 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('rubySymbol',                    s:hue_1,   '', '')
   " }}}
 
-  " Git and git related plugins highlighting --------------------------------{{{
-  call <sid>X('gitcommitComment',       s:mono_3,  '', '')
-  call <sid>X('gitcommitUnmerged',      s:hue_4,   '', '')
-  call <sid>X('gitcommitOnBranch',      '',        '', '')
-  call <sid>X('gitcommitBranch',        s:hue_3,   '', '')
-  call <sid>X('gitcommitDiscardedType', s:hue_5,   '', '')
-  call <sid>X('gitcommitSelectedType',  s:hue_4,   '', '')
-  call <sid>X('gitcommitHeader',        '',        '', '')
-  call <sid>X('gitcommitUntrackedFile', s:hue_1,   '', '')
-  call <sid>X('gitcommitDiscardedFile', s:hue_5,   '', '')
-  call <sid>X('gitcommitSelectedFile',  s:hue_4,   '', '')
-  call <sid>X('gitcommitUnmergedFile',  s:hue_6_2, '', '')
-  call <sid>X('gitcommitFile',          '',        '', '')
-  hi link gitcommitNoBranch       gitcommitBranch
-  hi link gitcommitUntracked      gitcommitComment
-  hi link gitcommitDiscarded      gitcommitComment
-  hi link gitcommitSelected       gitcommitComment
-  hi link gitcommitDiscardedArrow gitcommitDiscardedFile
-  hi link gitcommitSelectedArrow  gitcommitSelectedFile
-  hi link gitcommitUnmergedArrow  gitcommitUnmergedFile
-
-  call <sid>X('SignifySignAdd',    s:hue_4,   '', '')
-  call <sid>X('SignifySignChange', s:hue_6_2, '', '')
-  call <sid>X('SignifySignDelete', s:hue_5,   '', '')
-  hi link GitGutterAdd    SignifySignAdd
-  hi link GitGutterChange SignifySignChange
-  hi link GitGutterDelete SignifySignDelete
-  call <sid>X('diffAdded',         s:hue_4,   '', '')
-  call <sid>X('diffRemoved',       s:hue_5,   '', '')
-  " }}}
-
-  " Markdown highlighting ---------------------------------------------------{{{
-  call <sid>X('markdownUrl',              s:mono_3,  '', '')
-  call <sid>X('markdownBold',             s:hue_6,   '', 'bold')
-  call <sid>X('markdownItalic',           s:hue_6,   '', 'bold')
-  call <sid>X('markdownCode',             s:hue_4,   '', '')
-  call <sid>X('markdownCodeBlock',        s:hue_5,   '', '')
-  call <sid>X('markdownCodeDelimiter',    s:hue_4,   '', '')
-  call <sid>X('markdownHeadingDelimiter', s:hue_5_2, '', '')
-  call <sid>X('markdownH1',               s:hue_5,   '', '')
-  call <sid>X('markdownH2',               s:hue_5,   '', '')
-  call <sid>X('markdownH3',               s:hue_5,   '', '')
-  call <sid>X('markdownH3',               s:hue_5,   '', '')
-  call <sid>X('markdownH4',               s:hue_5,   '', '')
-  call <sid>X('markdownH5',               s:hue_5,   '', '')
-  call <sid>X('markdownH6',               s:hue_5,   '', '')
-  call <sid>X('markdownListMarker',       s:hue_5,   '', '')
-  " }}}
-
-  " XML highlighting --------------------------------------------------------{{{
-  call <sid>X('xmlAttrib',  s:hue_6_2, '', '')
-  call <sid>X('xmlEndTag',  s:hue_5,   '', '')
-  call <sid>X('xmlTag',     s:hue_5,   '', '')
-  call <sid>X('xmlTagName', s:hue_5,   '', '')
+  " Spelling highlighting ---------------------------------------------------{{{
+  call <sid>X('SpellBad',     '', s:syntax_bg, 'undercurl')
+  call <sid>X('SpellLocal',   '', s:syntax_bg, 'undercurl')
+  call <sid>X('SpellCap',     '', s:syntax_bg, 'undercurl')
+  call <sid>X('SpellRare',    '', s:syntax_bg, 'undercurl')
   " }}}
 
   " Vim highlighting --------------------------------------------------------{{{
@@ -617,11 +617,11 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('vimVar',          s:hue_5,  '', '')
   " }}}
 
-  " Spelling highlighting ---------------------------------------------------{{{
-  call <sid>X('SpellBad',     '', s:syntax_bg, 'undercurl')
-  call <sid>X('SpellLocal',   '', s:syntax_bg, 'undercurl')
-  call <sid>X('SpellCap',     '', s:syntax_bg, 'undercurl')
-  call <sid>X('SpellRare',    '', s:syntax_bg, 'undercurl')
+  " XML highlighting --------------------------------------------------------{{{
+  call <sid>X('xmlAttrib',  s:hue_6_2, '', '')
+  call <sid>X('xmlEndTag',  s:hue_5,   '', '')
+  call <sid>X('xmlTag',     s:hue_5,   '', '')
+  call <sid>X('xmlTagName', s:hue_5,   '', '')
   " }}}
 
 endif
