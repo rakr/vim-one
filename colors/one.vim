@@ -578,9 +578,10 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   " }}}
 
   " Pug (Formerly Jade) highlighting ----------------------------------------{{{
-  call <sid>X('pugClass',     s:hue_6,    '', '')
-  call <sid>X('pugDocType',   s:mono_3,   '', 'italic')
-  call <sid>X('pugTag',       s:hue_5,    '', '')
+  call <sid>X('pugAttributesDelimiter',   s:hue_6,    '', '')
+  call <sid>X('pugClass',                 s:hue_6,    '', '')
+  call <sid>X('pugDocType',               s:mono_3,   '', 'italic')
+  call <sid>X('pugTag',                   s:hue_5,    '', '')
   " }}}
 
   " Ruby highlighting -------------------------------------------------------{{{
