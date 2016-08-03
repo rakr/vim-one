@@ -493,6 +493,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   " }}}
 
   " HTML highlighting -------------------------------------------------------{{{
+  call <sid>X('htmlArg',            s:hue_6,  '', '')
   call <sid>X('htmlTagName',        s:hue_5,  '', '')
   call <sid>X('htmlSpecialTagName', s:hue_5,  '', '')
   call <sid>X('htmlTag',            s:mono_3, '', '')
@@ -574,6 +575,12 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('markdownH5',               s:hue_5,   '', '')
   call <sid>X('markdownH6',               s:hue_5,   '', '')
   call <sid>X('markdownListMarker',       s:hue_5,   '', '')
+  " }}}
+
+  " Pug (Formerly Jade) highlighting ----------------------------------------{{{
+  call <sid>X('pugClass',     s:hue_6,    '', '')
+  call <sid>X('pugDocType',   s:mono_3,   '', 'italic')
+  call <sid>X('pugTag',       s:hue_5,    '', '')
   " }}}
 
   " Ruby highlighting -------------------------------------------------------{{{
