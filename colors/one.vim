@@ -632,6 +632,18 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('xmlTagName', s:hue_5,   '', '')
   " }}}
 
+  " ZSH highlighting --------------------------------------------------------{{{
+  call <sid>X('zshCommands',     s:syntax_fg, '', '')
+  call <sid>X('zshDeref',        s:hue_5,     '', '')
+  call <sid>X('zshShortDeref',   s:hue_5,     '', '')
+  call <sid>X('zshFunction',     s:hue_1,     '', '')
+  call <sid>X('zshKeyword',      s:hue_3,     '', '')
+  call <sid>X('zshSubst',        s:hue_5,     '', '')
+  call <sid>X('zshSubstDelim',   s:mono_3,    '', '')
+  call <sid>X('zshTypes',        s:hue_3,     '', '')
+  call <sid>X('zshVariableDef',  s:hue_6,     '', '')
+  " }}}
+
 endif
 "}}}
 
