@@ -618,10 +618,15 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   " }}}
 
   " Vim highlighting --------------------------------------------------------{{{
+  call <sid>X('vimCommand',      s:hue_3,  '', '')
+  call <sid>X('vimCommentTitle', s:mono_3, '', 'bold')
+  call <sid>X('vimFunction',     s:hue_1,  '', '')
+  call <sid>X('vimFuncName',     s:hue_3,  '', '')
   call <sid>X('vimHighlight',    s:hue_2,  '', '')
   call <sid>X('vimLineComment',  s:mono_3, '', 'italic')
-  call <sid>X('vimCommentTitle', s:mono_3, '', 'bold')
-  call <sid>X('vimCommand',      s:hue_2,  '', '')
+  call <sid>X('vimParenSep',     s:mono_3, '', '')
+  call <sid>X('vimSep',          s:mono_3, '', '')
+  call <sid>X('vimUserFunc',     s:hue_1,  '', '')
   call <sid>X('vimVar',          s:hue_5,  '', '')
   " }}}
 
