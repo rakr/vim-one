@@ -579,6 +579,17 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('markdownListMarker',       s:hue_5,   '', '')
   " }}}
 
+  " PHP highlighting --------------------------------------------------------{{{
+  call <sid>X('phpClass',        s:hue_6_2, '', '')
+  call <sid>X('phpFunction',     s:hue_2,   '', '')
+  call <sid>X('phpFunctions',    s:hue_2,   '', '')
+  call <sid>X('phpInclude',      s:hue_3,   '', '')
+  call <sid>X('phpKeyword',      s:hue_3,   '', '')
+  call <sid>X('phpParent',       s:mono_3,  '', '')
+  call <sid>X('phpType',         s:hue_3,   '', '')
+  call <sid>X('phpSuperGlobals', s:hue_5,   '', '')
+  " }}}
+
   " Pug (Formerly Jade) highlighting ----------------------------------------{{{
   call <sid>X('pugAttributesDelimiter',   s:hue_6,    '', '')
   call <sid>X('pugClass',                 s:hue_6,    '', '')
