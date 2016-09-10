@@ -37,20 +37,23 @@ scheme.
 ### Stable
 
 * Asciidoc
-* Cucumber features
 * CSS and Sass
+* Cucumber features
 * Elixir
+* Go
 * HTML
 * JavaScript, JSON
 * Markdown
 * Ruby
+* Rust
 * Vim
 * XML
-* Go
 
 ### In progress
 
 * Jade
+* PHP
+* Python
 
 
 ## Installation
@@ -114,6 +117,12 @@ I've tested the following setup on a Mac:
 * iTerm2 nightly build
 * Neovim 0.1.4 and 0.1.5-dev
 * Vim 7.4.1952
+
+## Contributors
+
+A special thank you to the following people
+
+* [Erasin](https://github.com/erasin): Rust support
 
 [logo]: screenshots/logo.png
 [screenshot_global]: screenshots/one.png
