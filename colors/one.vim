@@ -662,6 +662,20 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('zshVariableDef',  s:hue_6,     '', '')
   " }}}
 
+" Rust highlighting -------------------------------------------------------{{{
+
+  call <sid>X('rustExternCrate',          s:hue_5,    '', 'bold')
+  call <sid>X('rustIdentifier',           s:hue_2,    '', '')
+  call <sid>X('rustDeriveTrait',          s:hue_4,    '', '')
+  call <sid>X('SpecialComment',           s:mono_3,    '', '')
+  call <sid>X('rustCommentLine',          s:mono_3,    '', '')
+  call <sid>X('rustCommentLineDoc',       s:mono_3,    '', '')
+  call <sid>X('rustCommentLineDocError',  s:mono_3,    '', '')
+  call <sid>X('rustCommentBlock',         s:mono_3,    '', '')
+  call <sid>X('rustCommentBlockDoc',      s:mono_3,    '', '')
+  call <sid>X('rustCommentBlockDocError', s:mono_3,    '', '')
+" }}}
+  
 endif
 "}}}
 
