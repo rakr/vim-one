@@ -675,9 +675,6 @@ if has('gui_running') || &t_Co == 8 || &t_Co == 256
   call <sid>X('rustCommentBlockDoc',      s:mono_3,    '', '')
   call <sid>X('rustCommentBlockDocError', s:mono_3,    '', '')
 " }}}
-  
-endif
-"}}}
 
 " Delete functions =========================================================={{{
 delf <SID>X
@@ -690,5 +687,9 @@ delf <SID>grey_color
 delf <SID>grey_level
 delf <SID>grey_number
 "}}}
+  
+endif
+"}}}
+
 
 " vim: set fdl=0 fdm=marker:
