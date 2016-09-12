@@ -16,7 +16,7 @@ if !exists('g:one_allow_italics')
   let g:one_allow_italics = 0
 endif
 
-if has('gui_running') || &t_Co == 88 || &t_Co == 256
+if has('gui_running') || &t_Co == 8 || &t_Co == 256
   " functions
   " returns an approximate grey index for the given grey level
 
@@ -675,9 +675,6 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('rustCommentBlockDoc',      s:mono_3,    '', '')
   call <sid>X('rustCommentBlockDocError', s:mono_3,    '', '')
 " }}}
-  
-endif
-"}}}
 
 " Delete functions =========================================================={{{
 delf <SID>X
@@ -690,5 +687,9 @@ delf <SID>grey_color
 delf <SID>grey_level
 delf <SID>grey_number
 "}}}
+  
+endif
+"}}}
+
 
 " vim: set fdl=0 fdm=marker:
