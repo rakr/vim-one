@@ -110,7 +110,17 @@ set background=dark " for the dark version
 " set background=light " for the light version
 colorscheme one
 ```
+### Tmux support
+To get true color working in tmux, ensure that the `$TERM` environment variable is set to `xterm-256color`. Inside the `.tmux.conf` file we need to override this terminal and also set the default terminal as 256 color.
 
+```
+# Add truecolor support
+set-option -ga terminal-overrides ",xterm-256color:Tc"
+# Default terminal is 256 colors
+set -g default-terminal "screen-256color"
+```
+
+Note that this only works for Neovim (tested on 0.1.5), Vim (7.5.2334) doesn't play nice for some reason. See [blog post Anton Kalyaev](http://homeonrails.com/2016/05/truecolor-in-gnome-terminal-tmux-and-neovim/) for more details on setting up tmux.
 
 I've tested the following setup on a Mac:
 
