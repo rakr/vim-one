@@ -120,7 +120,7 @@ set-option -ga terminal-overrides ",xterm-256color:Tc"
 set -g default-terminal "screen-256color"
 ```
 
-Note that this only works for Neovim (tested on 0.1.5), Vim (7.5.2334) doesn't play nice for some reason. See [blog post Anton Kalyaev](http://homeonrails.com/2016/05/truecolor-in-gnome-terminal-tmux-and-neovim/) for more details on setting up tmux.
+Note that this only works for Neovim (tested on 0.1.5). For some reason Vim (7.5.2334) doesn't play nice. See [blog post by Anton Kalyaev](http://homeonrails.com/2016/05/truecolor-in-gnome-terminal-tmux-and-neovim/) for more details on setting up tmux.
 
 I've tested the following setup on a Mac:
 
