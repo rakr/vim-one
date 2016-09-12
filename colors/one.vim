@@ -676,19 +676,19 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('rustCommentBlockDocError', s:mono_3,    '', '')
 " }}}
   
-endif
-"}}}
+  " Delete functions =========================================================={{{
+  delf <SID>X
+  delf <SID>rgb
+  delf <SID>color
+  delf <SID>rgb_color
+  delf <SID>rgb_level
+  delf <SID>rgb_number
+  delf <SID>grey_color
+  delf <SID>grey_level
+  delf <SID>grey_number
+  "}}}
 
-" Delete functions =========================================================={{{
-delf <SID>X
-delf <SID>rgb
-delf <SID>color
-delf <SID>rgb_color
-delf <SID>rgb_level
-delf <SID>rgb_number
-delf <SID>grey_color
-delf <SID>grey_level
-delf <SID>grey_number
+endif
 "}}}
 
 " vim: set fdl=0 fdm=marker:

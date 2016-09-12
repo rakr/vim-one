@@ -123,6 +123,7 @@ I've tested the following setup on a Mac:
 A special thank you to the following people
 
 * [Erasin](https://github.com/erasin): Rust support
+* [Malcolm Ramsay - malramsay64](https://github.com/malramsay64): Gracefully fail if colorscheme is not properly loaded
 
 [logo]: screenshots/logo.png
 [screenshot_global]: screenshots/one.png
