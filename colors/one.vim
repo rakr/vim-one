@@ -690,6 +690,5 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
 
 endif
 "}}}
-  
 
 " vim: set fdl=0 fdm=marker:
