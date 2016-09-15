@@ -449,6 +449,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   " }}}
 
   " Elixir highlighting------------------------------------------------------{{{
+  hi link elixirModuleDefine Define
   call <sid>X('elixirAlias',             s:hue_6_2, '', '')
   call <sid>X('elixirAtom',              s:hue_1,   '', '')
   call <sid>X('elixirBlockDefinition',   s:hue_3,   '', '')
