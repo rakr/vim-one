@@ -123,6 +123,15 @@ set -g default-terminal "screen-256color"
 
 Note that this only works for Neovim (tested on 0.1.5). For some reason Vim (7.5.2334) doesn't play nice. See [blog post by Anton Kalyaev](http://homeonrails.com/2016/05/truecolor-in-gnome-terminal-tmux-and-neovim/) for more details on setting up tmux.
 
+For Vim inside tmux, you can add the following snippet in your `~/.vimrc`
+
+```viml
+set t_8b=^[[48;2;%lu;%lu;%lum
+set t_8f=^[[38;2;%lu;%lu;%lum
+```
+
+Note: the `^[` in this snippet is a real escape character. To insert it, press `Ctrl-V` and then `Esc`.
+
 I've tested the following setup on a Mac:
 
 * iTerm2 nightly build
