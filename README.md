@@ -145,6 +145,7 @@ A special thank you to the following people
 * [Erasin](https://github.com/erasin): Rust support
 * [Malcolm Ramsay - malramsay64](https://github.com/malramsay64): Gracefully fail if colorscheme is not properly loaded
 * [Arthur Xavier](https://github.com/arthur-xavier): PureScript support
+* [keremc](https://github.com/keremc): Tip Vim true color support inside tmux
 
 [logo]: screenshots/logo.png
 [screenshot_global]: screenshots/one.png
