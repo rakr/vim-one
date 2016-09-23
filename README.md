@@ -44,7 +44,7 @@ scheme.
 * HTML
 * JavaScript, JSON
 * Markdown
-* PureScript (thanks: [Arthur Xavier](https://github.com/arthur-xavier])
+* PureScript (thanks: [Arthur Xavier](https://github.com/arthur-xavier))
 * Ruby
 * Rust (thanks: [Erasin](https://github.com/erasin))
 * Vim
