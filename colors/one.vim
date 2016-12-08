@@ -308,7 +308,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('VertSplit',    s:vertsplit,     '',               'none')
   call <sid>X('Folded',       s:syntax_bg,     s:syntax_fold_bg, 'none')
   call <sid>X('FoldColumn',   s:mono_3,        s:syntax_cursor,  '')
-  call <sid>X('IncSearch',    s:syntax_bg,     s:hue_6_2,        '')
+  call <sid>X('IncSearch',    s:hue_6,         '',        '')
   call <sid>X('LineNr',       s:syntax_gutter, '',               '')
   call <sid>X('CursorLineNr', s:syntax_fg,     '',               'none')
   call <sid>X('MatchParen',   s:syntax_bg,     s:hue_5,          '')
