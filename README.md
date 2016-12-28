@@ -77,6 +77,7 @@ Make sure to read the update if you are using tmux version 2.1 or above.
 To benefit from the **true color** support make sure to add the following lines in your `.vimrc` or `.config/nvim/init.vim`
 
 ```vim
+"Credit joshdick
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
 "If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
 "(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
