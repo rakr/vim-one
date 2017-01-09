@@ -512,6 +512,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('htmlTagN',           s:hue_5,  '', '')
   call <sid>X('htmlSpecialTagName', s:hue_5,  '', '')
   call <sid>X('htmlTag',            s:mono_3, '', '')
+  hi link htmlH1 String
 
   call <sid>X('MatchTag',           s:syntax_accent, s:visual_grey, 'bold')
   " }}}
@@ -703,6 +704,10 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('rustCommentBlockDoc',      s:mono_3,    '', '')
   call <sid>X('rustCommentBlockDocError', s:mono_3,    '', '')
 " }}}
+
+  " man highlighting --------------------------------------------------------{{{
+  hi link manTitle String
+  " }}}
 
   " Delete functions =========================================================={{{
   delf <SID>X
