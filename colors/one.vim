@@ -707,6 +707,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
 
   " man highlighting --------------------------------------------------------{{{
   hi link manTitle String
+  call <sid>X('manFooter', s:mono_3, '', '')
   " }}}
 
   " Delete functions =========================================================={{{
