@@ -340,7 +340,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('TabLine',      s:mono_1,        s:syntax_bg,      '')
   call <sid>X('TabLineFill',  s:mono_3,        s:visual_grey,    'none')
   call <sid>X('TabLineSel',   s:syntax_bg,     s:hue_2,          '')
-  call <sid>X('Title',        s:hue_4,         '',               'none')
+  call <sid>X('Title',        s:mono_3,        '',               'none')
   call <sid>X('Visual',       '',              s:visual_grey,    '')
   call <sid>X('VisualNOS',    '',              s:visual_grey,    '')
   call <sid>X('WarningMsg',   s:hue_5,         '',               '')
@@ -512,6 +512,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('htmlTagN',           s:hue_5,  '', '')
   call <sid>X('htmlSpecialTagName', s:hue_5,  '', '')
   call <sid>X('htmlTag',            s:mono_3, '', '')
+  hi link htmlH1 String
 
   call <sid>X('MatchTag',           s:syntax_accent, s:visual_grey, 'bold')
   " }}}
@@ -690,8 +691,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('zshVariableDef',  s:hue_6,     '', '')
   " }}}
 
-" Rust highlighting -------------------------------------------------------{{{
-
+  " Rust highlighting -------------------------------------------------------{{{
   call <sid>X('rustExternCrate',          s:hue_5,    '', 'bold')
   call <sid>X('rustIdentifier',           s:hue_2,    '', '')
   call <sid>X('rustDeriveTrait',          s:hue_4,    '', '')
@@ -702,7 +702,12 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('rustCommentBlock',         s:mono_3,    '', '')
   call <sid>X('rustCommentBlockDoc',      s:mono_3,    '', '')
   call <sid>X('rustCommentBlockDocError', s:mono_3,    '', '')
-" }}}
+  " }}}
+
+  " man highlighting --------------------------------------------------------{{{
+  hi link manTitle String
+  call <sid>X('manFooter', s:mono_3, '', '')
+  " }}}
 
   " Delete functions =========================================================={{{
   delf <SID>X
