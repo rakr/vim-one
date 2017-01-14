@@ -252,7 +252,6 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
     let s:mono_2 = '828997'
     let s:mono_3 = '5c6370'
 
-
     let s:hue_1  = '56b6c2' " cyan
     let s:hue_2  = '61afef' " blue
     let s:hue_3  = 'c678dd' " purple
@@ -328,8 +327,8 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('ModeMsg',      s:syntax_fg,     '',               '')
   call <sid>X('MoreMsg',      s:syntax_fg,     '',               '')
   call <sid>X('NonText',      s:mono_3,        '',               'none')
-  call <sid>X('PMenu',        '',              s:visual_grey,    '')
-  call <sid>X('PMenuSel',     '',              s:syntax_bg,      '')
+  call <sid>X('PMenu',        '',              s:syntax_bg,      '')
+  call <sid>X('PMenuSel',     '',              s:visual_grey,    '')
   call <sid>X('PMenuSbar',    '',              s:syntax_bg,      '')
   call <sid>X('PMenuThumb',   '',              s:mono_1,         '')
   call <sid>X('Question',     s:hue_2,         '',               '')
