@@ -53,10 +53,14 @@ You can use your preferred Vim Package Manager to install **One**.
 **One** comes in two flavors: light and dark, make sure to properly set your `background` before setting the colorscheme.
 
 ```vim
+colorscheme one
 set background=dark " for the dark version
 " set background=light " for the light version
-colorscheme one
 ```
+
+`set background` has to be called after setting the colorscheme, this explains
+the issue #21 where Vim tries to determine the best background when `ctermbg`
+for the `Normal` highlight is defined.
 
 ### Italic support
 
