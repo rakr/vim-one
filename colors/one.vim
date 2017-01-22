@@ -339,7 +339,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('TabLine',      s:mono_1,        s:syntax_bg,      '')
   call <sid>X('TabLineFill',  s:mono_3,        s:visual_grey,    'none')
   call <sid>X('TabLineSel',   s:syntax_bg,     s:hue_2,          '')
-  call <sid>X('Title',        s:mono_3,        '',               'none')
+  call <sid>X('Title',        s:syntax_fg,     '',               'bold')
   call <sid>X('Visual',       '',              s:visual_grey,    '')
   call <sid>X('VisualNOS',    '',              s:visual_grey,    '')
   call <sid>X('WarningMsg',   s:hue_5,         '',               '')
@@ -512,7 +512,6 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('htmlSpecialTagName', s:hue_5,  '', '')
   call <sid>X('htmlTag',            s:mono_3, '', '')
   call <sid>X('htmlEndTag',         s:mono_3, '', '')
-  hi link htmlH1 String
 
   call <sid>X('MatchTag',           s:syntax_accent, s:visual_grey, 'bold')
   " }}}
