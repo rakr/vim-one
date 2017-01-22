@@ -310,7 +310,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('bold',         '',              '',               'bold')
   call <sid>X('ColorColumn',  '',              s:syntax_cursor,  '')
   call <sid>X('Conceal',      '',              '',               '')
-  call <sid>X('Cursor',       '',     s:syntax_accent,          '')
+  call <sid>X('Cursor',       '',              s:syntax_accent,  '')
   call <sid>X('CursorIM',     '',              '',               '')
   call <sid>X('CursorColumn', '',              s:syntax_cursor,  '')
   call <sid>X('CursorLine',   '',              s:syntax_cursor,  'none')
@@ -319,7 +319,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('VertSplit',    s:vertsplit,     '',               'none')
   call <sid>X('Folded',       s:syntax_bg,     s:syntax_fold_bg, 'none')
   call <sid>X('FoldColumn',   s:mono_3,        s:syntax_cursor,  '')
-  call <sid>X('IncSearch',    s:hue_6,         '',        '')
+  call <sid>X('IncSearch',    s:hue_6,         '',               '')
   call <sid>X('LineNr',       s:syntax_gutter, '',               '')
   call <sid>X('CursorLineNr', s:syntax_fg,     '',               'none')
   call <sid>X('MatchParen',   s:syntax_bg,     s:hue_5,          '')
@@ -568,16 +568,16 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   " }}}
 
   " JSON highlighting -------------------------------------------------------{{{
-  call <sid>X('jsonCommentError',      s:mono_1, '', ''        )
-  call <sid>X('jsonKeyword',           s:hue_5,  '', ''        )
-  call <sid>X('jsonQuote',             s:mono_3, '', ''        )
-  call <sid>X('jsonTrailingCommaError',s:hue_5,  '', 'reverse' )
-  call <sid>X('jsonMissingCommaError', s:hue_5,  '', 'reverse' )
-  call <sid>X('jsonNoQuotesError',     s:hue_5,  '', 'reverse' )
-  call <sid>X('jsonNumError',          s:hue_5,  '', 'reverse' )
-  call <sid>X('jsonString',            s:hue_4,  '', ''        )
-  call <sid>X('jsonStringSQError',     s:hue_5,  '', 'reverse' )
-  call <sid>X('jsonSemicolonError',    s:hue_5,  '', 'reverse' )
+  call <sid>X('jsonCommentError',         s:mono_1,  '', ''        )
+  call <sid>X('jsonKeyword',              s:hue_5,   '', ''        )
+  call <sid>X('jsonQuote',                s:mono_3,  '', ''        )
+  call <sid>X('jsonTrailingCommaError',   s:hue_5,   '', 'reverse' )
+  call <sid>X('jsonMissingCommaError',    s:hue_5,   '', 'reverse' )
+  call <sid>X('jsonNoQuotesError',        s:hue_5,   '', 'reverse' )
+  call <sid>X('jsonNumError',             s:hue_5,   '', 'reverse' )
+  call <sid>X('jsonString',               s:hue_4,   '', ''        )
+  call <sid>X('jsonStringSQError',        s:hue_5,   '', 'reverse' )
+  call <sid>X('jsonSemicolonError',       s:hue_5,   '', 'reverse' )
   " }}}
 
   " Markdown highlighting ---------------------------------------------------{{{
