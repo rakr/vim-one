@@ -251,6 +251,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
     let s:mono_1 = 'abb2bf'
     let s:mono_2 = '828997'
     let s:mono_3 = '5c6370'
+    let s:mono_4 = '4b5263'
 
     let s:hue_1  = '56b6c2' " cyan
     let s:hue_2  = '61afef' " blue
@@ -276,6 +277,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
     let s:mono_1 = '494b53'
     let s:mono_2 = '696c77'
     let s:mono_3 = 'a0a1a7'
+    let s:mono_4 = 'c2c2c3'
 
     let s:hue_1  = '0184bc' " cyan
     let s:hue_2  = '4078f2' " blue
@@ -320,8 +322,8 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('Folded',       s:syntax_bg,     s:syntax_fold_bg, 'none')
   call <sid>X('FoldColumn',   s:mono_3,        s:syntax_cursor,  '')
   call <sid>X('IncSearch',    s:hue_6,         '',               '')
-  call <sid>X('LineNr',       s:syntax_gutter, '',               '')
-  call <sid>X('CursorLineNr', s:syntax_fg,     '',               'none')
+  call <sid>X('LineNr',       s:mono_4,        s:syntax_cursor,  '')
+  call <sid>X('CursorLineNr', s:syntax_fg,     s:syntax_cursor,  'none')
   call <sid>X('MatchParen',   s:syntax_bg,     s:hue_5,          '')
   call <sid>X('Italic',       '',              '',               'italic')
   call <sid>X('ModeMsg',      s:syntax_fg,     '',               '')
