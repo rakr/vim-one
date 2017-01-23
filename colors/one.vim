@@ -625,6 +625,10 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('purescriptOperator',         s:syntax_fg, '', '')
   " }}}
 
+  " Python highlighting -----------------------------------------------------{{{
+  call <sid>X('pythonImport',               s:hue_3,     '', '')
+  " }}}
+
   " Ruby highlighting -------------------------------------------------------{{{
   call <sid>X('rubyBlock',                     s:hue_3,   '', '')
   call <sid>X('rubyBlockParameter',            s:hue_5,   '', '')
