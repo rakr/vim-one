@@ -515,7 +515,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('htmlTag',            s:mono_3, '', '')
   call <sid>X('htmlEndTag',         s:mono_3, '', '')
 
-  call <sid>X('MatchTag',           s:syntax_accent, s:visual_grey, 'bold')
+  call <sid>X('MatchTag',           s:syntax_accent, '', 'underline')
   " }}}
 
   " JavaScript highlighting -------------------------------------------------{{{
@@ -530,16 +530,22 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('javaScriptReserved',     s:hue_3,   '', '')
   " https://github.com/pangloss/vim-javascript
   call <sid>X('jsArrowFunction',        s:hue_3,   '', '')
+  call <sid>X('jsBraces',               s:mono_2,  '', '')
+  call <sid>X('jsClassBraces',          s:mono_2,  '', '')
   call <sid>X('jsClassKeywords',        s:hue_3,   '', '')
   call <sid>X('jsDocParam',             s:hue_2,   '', '')
   call <sid>X('jsDocTags',              s:hue_3,   '', '')
+  call <sid>X('jsFuncBraces',           s:mono_2,  '', '')
   call <sid>X('jsFuncCall',             s:hue_2,   '', '')
+  call <sid>X('jsFuncParens',           s:mono_2,  '', '')
   call <sid>X('jsFunction',             s:hue_3,   '', '')
   call <sid>X('jsGlobalObjects',        s:hue_6_2, '', '')
   call <sid>X('jsModuleWords',          s:hue_3,   '', '')
   call <sid>X('jsModules',              s:hue_3,   '', '')
+  call <sid>X('jsNoise',                s:mono_2,  '', '')
   call <sid>X('jsNull',                 s:hue_6,   '', '')
   call <sid>X('jsOperator',             s:hue_3,   '', '')
+  call <sid>X('jsParens',               s:mono_2,  '', '')
   call <sid>X('jsStorageClass',         s:hue_3,   '', '')
   call <sid>X('jsTemplateBraces',       s:hue_5_2, '', '')
   call <sid>X('jsTemplateVar',          s:hue_4,   '', '')
