@@ -142,4 +142,4 @@ A special thank you to the following people
 [logo]: screenshots/new-logo.png
 
 [issue_3]: https://github.com/rakr/vim-one/issues/3
-[issue_21]: https://github.com/rakr/vim-one/issues/3
+[issue_21]: https://github.com/rakr/vim-one/issues/21
