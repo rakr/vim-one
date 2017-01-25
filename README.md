@@ -50,7 +50,7 @@ You can use your preferred Vim Package Manager to install **One**.
 
 ## Usage
 
-**One** comes in two flavors: light and dark, make sure to properly set your `background` before setting the colorscheme.
+**One** comes in two flavors: light and dark.
 
 ```vim
 colorscheme one
@@ -59,7 +59,7 @@ set background=dark " for the dark version
 ```
 
 `set background` has to be called after setting the colorscheme, this explains
-the issue #21 where Vim tries to determine the best background when `ctermbg`
+the issue [#21][issue_21] where Vim tries to determine the best background when `ctermbg`
 for the `Normal` highlight is defined.
 
 ### Italic support
@@ -142,3 +142,4 @@ A special thank you to the following people
 [logo]: screenshots/new-logo.png
 
 [issue_3]: https://github.com/rakr/vim-one/issues/3
+[issue_21]: https://github.com/rakr/vim-one/issues/3
