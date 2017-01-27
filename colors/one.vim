@@ -635,6 +635,19 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
 
   " Python highlighting -----------------------------------------------------{{{
   call <sid>X('pythonImport',               s:hue_3,     '', '')
+  call <sid>X('pythonBuiltin',              s:hue_1,     '', '')
+  call <sid>X('pythonStatement',            s:hue_3,     '', '')
+  call <sid>X('pythonParam',                s:hue_6,     '', '')
+  call <sid>X('pythonEscape',               s:hue_5,     '', '')
+  call <sid>X('pythonSelf',                 s:mono_2,    '', 'italic')
+  call <sid>X('pythonClass',                s:hue_2,     '', '')
+  call <sid>X('pythonOperator',             s:hue_3,     '', '')
+  call <sid>X('pythonEscape',               s:hue_5,     '', '')
+  call <sid>X('pythonFunction',             s:hue_2,     '', '')
+  call <sid>X('pythonKeyword',              s:hue_2,     '', '')
+  call <sid>X('pythonModule',               s:hue_3,     '', '')
+  call <sid>X('pythonStringDelimiter',      s:hue_4,     '', '')
+  call <sid>X('pythonSymbol',               s:hue_1,     '', '')
   " }}}
 
   " Ruby highlighting -------------------------------------------------------{{{
