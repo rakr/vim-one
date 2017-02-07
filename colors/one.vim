@@ -273,6 +273,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
     let s:vertsplit    = '181a1f'
     let s:special_grey = '3b4048'
     let s:visual_grey  = '3e4452'
+    let s:pmenu        = '333841'
   else
     let s:mono_1 = '494b53'
     let s:mono_2 = '696c77'
@@ -300,6 +301,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
     let s:vertsplit    = 'e7e9e1'
     let s:special_grey = 'd3d3d3'
     let s:visual_grey  = 'd0d0d0'
+    let s:pmenu        = 'dfdfdf'
   endif
 
   let s:syntax_fg = s:mono_1
@@ -329,8 +331,8 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('ModeMsg',      s:syntax_fg,     '',               '')
   call <sid>X('MoreMsg',      s:syntax_fg,     '',               '')
   call <sid>X('NonText',      s:mono_3,        '',               'none')
-  call <sid>X('PMenu',        '',              s:syntax_bg,      '')
-  call <sid>X('PMenuSel',     '',              s:visual_grey,    '')
+  call <sid>X('PMenu',        '',              s:pmenu,          '')
+  call <sid>X('PMenuSel',     '',              s:mono_4,         '')
   call <sid>X('PMenuSbar',    '',              s:syntax_bg,      '')
   call <sid>X('PMenuThumb',   '',              s:mono_1,         '')
   call <sid>X('Question',     s:hue_2,         '',               '')
