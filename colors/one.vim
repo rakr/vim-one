@@ -326,7 +326,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('IncSearch',    s:hue_6,         '',               '')
   call <sid>X('LineNr',       s:mono_4,        '',               '')
   call <sid>X('CursorLineNr', s:syntax_fg,     s:syntax_cursor,  'none')
-  call <sid>X('MatchParen',   s:syntax_bg,     s:hue_5,          '')
+  call <sid>X('MatchParen',   s:hue_5,         'none',           'underline')
   call <sid>X('Italic',       '',              '',               'italic')
   call <sid>X('ModeMsg',      s:syntax_fg,     '',               '')
   call <sid>X('MoreMsg',      s:syntax_fg,     '',               '')
@@ -441,8 +441,8 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('cssPseudoClassId',     s:hue_6,  '', '')
   call <sid>X('cssSelectorOp',        s:hue_3,  '', '')
   call <sid>X('cssSelectorOp2',       s:hue_3,  '', '')
-  call <sid>X('cssStringQ',           s:mono_1, '', '')
-  call <sid>X('cssStringQQ',          s:mono_1, '', '')
+  call <sid>X('cssStringQ',           s:hue_4,  '', '')
+  call <sid>X('cssStringQQ',          s:hue_4,  '', '')
   call <sid>X('cssTagName',           s:hue_5,  '', '')
   call <sid>X('cssAttr',              s:hue_6,  '', '')
 
@@ -460,6 +460,8 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('sassMixin',          s:hue_3,   '', '')
   call <sid>X('sassMixinName',      s:hue_2,   '', '')
   call <sid>X('sassMixing',         s:hue_3,   '', '')
+
+  call <sid>X('scssSelectorName',   s:hue_6_2, '', '')
   " }}}
 
   " Elixir highlighting------------------------------------------------------{{{
@@ -517,7 +519,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('htmlTag',            s:mono_3, '', '')
   call <sid>X('htmlEndTag',         s:mono_3, '', '')
 
-  call <sid>X('MatchTag',           s:syntax_accent, '', 'underline')
+  call <sid>X('MatchTag',   s:hue_5,         'none',           'underline')
   " }}}
 
   " JavaScript highlighting -------------------------------------------------{{{
