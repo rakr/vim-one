@@ -519,7 +519,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('htmlTag',            s:mono_3, '', '')
   call <sid>X('htmlEndTag',         s:mono_3, '', '')
 
-  call <sid>X('MatchTag',   s:hue_5,         'none',           'underline')
+  call <sid>X('MatchTag',   s:hue_5,         s:syntax_cursor,  'underline,bold')
   " }}}
 
   " JavaScript highlighting -------------------------------------------------{{{
