@@ -43,6 +43,9 @@ scheme.
 * PHP
 * Python
 
+* Switch to estilo in progress, not stable at all and does not reflect all the
+  capabilities of the current mainstream version
+
 
 ## Installation
 
