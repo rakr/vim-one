@@ -353,6 +353,11 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('Special',      s:hue_2,         '',               '')
   " }}}
 
+  " Vim Help highlighting ---------------------------------------------------{{{
+  call <sid>X('helpCommand',   s:hue_6_2, '', '')
+  call <sid>X('helpExample',   s:hue_6_2, '', '')
+  " }}}
+
   " Standard syntax highlighting --------------------------------------------{{{
   call <sid>X('Comment',        s:mono_3,        '',          'italic')
   call <sid>X('Constant',       s:hue_4,         '',          '')
