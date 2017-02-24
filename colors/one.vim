@@ -412,6 +412,13 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('asciidocListingBlock',   s:mono_2,  '', '')
   " }}}
 
+  " C/C++ highlighting ------------------------------------------------------{{{
+  call <sid>X('cConstant',           s:hue_6,  '', '')
+  call <sid>X('cType',               s:hue_3,  '', '')
+
+  call <sid>X('cCppString',          s:hue_4,  '', '')
+  " }}}
+
   " Cucumber highlighting ---------------------------------------------------{{{
   call <sid>X('cucumberGiven',           s:hue_2,  '', '')
   call <sid>X('cucumberWhen',            s:hue_2,  '', '')
