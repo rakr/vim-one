@@ -439,7 +439,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   " CSS/Sass highlighting ---------------------------------------------------{{{
   call <sid>X('cssAttrComma',         s:hue_3,  '', '')
   call <sid>X('cssAttributeSelector', s:hue_4,  '', '')
-  call <sid>X('cssBraces',            s:mono_3, '', '')
+  call <sid>X('cssBraces',            s:mono_2, '', '')
   call <sid>X('cssClassName',         s:hue_6,  '', '')
   call <sid>X('cssClassNameDot',      s:hue_6,  '', '')
   call <sid>X('cssDefinition',        s:hue_3,  '', '')
