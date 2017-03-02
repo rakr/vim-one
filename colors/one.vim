@@ -539,7 +539,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   " JavaScript highlighting -------------------------------------------------{{{
   call <sid>X('coffeeString',           s:hue_4,   '', '')
 
-  call <sid>X('javaScriptBraces',       s:mono_3,  '', '')
+  call <sid>X('javaScriptBraces',       s:mono_2,  '', '')
   call <sid>X('javaScriptFunction',     s:hue_3,   '', '')
   call <sid>X('javaScriptIdentifier',   s:hue_3,   '', '')
   call <sid>X('javaScriptNull',         s:hue_6,   '', '')
