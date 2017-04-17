@@ -150,6 +150,12 @@ one#highlight(group, fg, bg, attribute)
   `ff0000`
 * `attribute`: `bold`, `italic`, `underline` or any comma separated combination
 
+For example:
+
+```
+call one#highlight('vimLineComment', 'cccccc', '', 'none')
+```
+
 ## Contributors
 
 A special thank you to the following people
