@@ -15,7 +15,6 @@ if exists("*<SID>X")
   delf <SID>grey_color
   delf <SID>grey_level
   delf <SID>grey_number
-  echomsg string('test')
 endif
 
 hi clear
