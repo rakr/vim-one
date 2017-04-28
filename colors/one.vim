@@ -305,7 +305,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
     let s:hue_6   = '986801' " orange 1
     let s:hue_6_2 = 'c18401' " orange 2
 
-    let s:syntax_bg     = 'fafafa'
+    let s:syntax_bg     = 'ffffff'
     let s:syntax_gutter = '9e9e9e'
     let s:syntax_cursor = 'f0f0f0'
 
