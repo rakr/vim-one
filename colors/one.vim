@@ -352,6 +352,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('Question',     s:hue_2,         '',               '')
   call <sid>X('Search',       s:syntax_bg,     s:hue_6_2,        '')
   call <sid>X('SpecialKey',   s:special_grey,  '',               'none')
+  call <sid>X('Whitespace',   s:special_grey,  '',               'none')
   call <sid>X('StatusLine',   s:syntax_fg,     s:syntax_cursor,  'none')
   call <sid>X('StatusLineNC', s:mono_3,        '',               '')
   call <sid>X('TabLine',      s:mono_1,        s:syntax_bg,      '')
