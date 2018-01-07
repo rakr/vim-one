@@ -519,6 +519,8 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('elixirAtom',              s:hue_1,   '', '')
   call <sid>X('elixirBlockDefinition',   s:hue_3,   '', '')
   call <sid>X('elixirModuleDeclaration', s:hue_6,   '', '')
+  call <sid>X('elixirInclude',           s:hue_5,   '', '')
+  call <sid>X('elixirOperator',          s:hue_6,   '', '')
   " }}}
 
   " Git and git related plugins highlighting --------------------------------{{{
