@@ -230,7 +230,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   fun <sid>X(group, fg, bg, attr)
     let l:attr = a:attr
     if g:one_allow_italics == 0 && l:attr ==? 'italic'
-        let l:attr= 'none'
+      let l:attr= 'none'
     endif
 
     let l:bg = ""
@@ -261,7 +261,9 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
 
 
   " Color definition --------------------------------------------------------{{{
+  let s:dark = 0
   if &background ==# 'dark'
+    let s:dark = 1
     let s:mono_1 = 'abb2bf'
     let s:mono_2 = '828997'
     let s:mono_3 = '5c6370'
@@ -829,10 +831,14 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
 
 endif
 "}}}
-  " Public API --------------------------------------------------------------{{{
-  function! one#highlight(group, fg, bg, attr)
-    call <sid>X(a:group, a:fg, a:bg, a:attr)
-  endfunction
-  "}}}
+" Public API --------------------------------------------------------------{{{
+function! one#highlight(group, fg, bg, attr)
+  call <sid>X(a:group, a:fg, a:bg, a:attr)
+endfunction
+"}}}
+
+if s:dark
+  set background=dark
+endif
 
 " vim: set fdl=0 fdm=marker:
