@@ -837,7 +837,7 @@ function! one#highlight(group, fg, bg, attr)
 endfunction
 "}}}
 
-if s:dark
+if exists('s:dark') && s:dark
   set background=dark
 endif
 
