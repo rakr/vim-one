@@ -28,7 +28,7 @@ if !exists('g:one_allow_italics')
   let g:one_allow_italics = 0
 endif
 
-if has('gui_running') || &t_Co == 88 || &t_Co == 256
+if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   " functions
   " returns an approximate grey index for the given grey level
 
