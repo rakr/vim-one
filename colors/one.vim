@@ -590,7 +590,6 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('MatchTag',   s:hue_5,         s:syntax_cursor,  'underline,bold')
   " }}}
 
-
   " JavaScript highlighting -------------------------------------------------{{{
   call <sid>X('coffeeString',           s:hue_4,   '', '')
 
