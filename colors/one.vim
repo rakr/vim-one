@@ -266,7 +266,7 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   " Highlight function
   " the original one is borrowed from mhartington/oceanic-next
   function! <SID>X(group, fg, bg, attr, ...)
-    let a:attrsp = get(a:, 1, "")
+    let l:attrsp = get(a:, 1, "")
     " fg, bg, attr, attrsp
     if !empty(a:fg)
       exec "hi " . a:group . " guifg=" .  a:fg[0]
@@ -280,8 +280,8 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
       exec "hi " . a:group . " gui=" .   a:attr
       exec "hi " . a:group . " cterm=" . a:attr
     endif
-    if !empty(a:attrsp)
-      exec "hi " . a:group . " guisp=" . a:attrsp[0]
+    if !empty(l:attrsp)
+      exec "hi " . a:group . " guisp=" . l:attrsp[0]
     endif
   endfunction
 
