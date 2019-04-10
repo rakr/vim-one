@@ -858,7 +858,7 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
 
 
   " Neovim NERDTree Background fix ------------------------------------------{{{
-  call <sid>X('NERDTreeFile', s:syntax_fg, '', '')
+  hi! link NERDTreeFile OneSyntaxFg
   " }}}
 
   " Neovim Terminal Colors --------------------------------------------------{{{
