@@ -843,26 +843,6 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   call <sid>X('NERDTreeFile', s:syntax_fg, '', '')
   " }}}
 
-  " Neovim Terminal Colors --------------------------------------------------{{{
-  if has('nvim')
-    let g:terminal_color_0  = "#353a44"
-    let g:terminal_color_8  = "#353a44"
-    let g:terminal_color_1  = "#e88388"
-    let g:terminal_color_9  = "#e88388"
-    let g:terminal_color_2  = "#a7cc8c"
-    let g:terminal_color_10 = "#a7cc8c"
-    let g:terminal_color_3  = "#ebca8d"
-    let g:terminal_color_11 = "#ebca8d"
-    let g:terminal_color_4  = "#72bef2"
-    let g:terminal_color_12 = "#72bef2"
-    let g:terminal_color_5  = "#d291e4"
-    let g:terminal_color_13 = "#d291e4"
-    let g:terminal_color_6  = "#65c2cd"
-    let g:terminal_color_14 = "#65c2cd"
-    let g:terminal_color_7  = "#e3e5e9"
-    let g:terminal_color_15 = "#e3e5e9"
-  endif
-
   " Delete functions =========================================================={{{
   " delf <SID>X
   " delf <SID>XAPI
