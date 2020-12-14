@@ -706,6 +706,17 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   call <sid>X('markdownListMarker',       s:hue_5,   '', '')
   " }}}
 
+  " Perl highlighting -------------------------------------------------------{{{
+  call <sid>X('perlFunction',      s:hue_3,     '', '')
+  call <sid>X('perlMethod',        s:syntax_fg, '', '')
+  call <sid>X('perlPackageConst',  s:hue_3,     '', '')
+  call <sid>X('perlPOD',           s:mono_3,    '', '')
+  call <sid>X('perlSubName',       s:syntax_fg, '', '')
+  call <sid>X('perlSharpBang',     s:mono_3,    '', '')
+  call <sid>X('perlSpecialString', s:hue_4,     '', '')
+  call <sid>X('perlVarPlain',      s:hue_2,     '', '')
+  call <sid>X('podCommand',        s:mono_3,    '', '')
+
   " PHP highlighting --------------------------------------------------------{{{
   call <sid>X('phpClass',        s:hue_6_2, '', '')
   call <sid>X('phpFunction',     s:hue_2,   '', '')
