@@ -854,6 +854,31 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   call <sid>X('NERDTreeFile', s:syntax_fg, '', '')
   " }}}
 
+
+  " Integrated terminal colors ----------------------------------------------{{{
+  if has('terminal')
+    let g:terminal_ansi_colors = [
+          \ s:syntax_bg[0],
+          \ s:hue_5[0],
+          \ s:hue_4[0],
+          \ s:hue_6_2[0],
+          \ s:hue_2[0],
+          \ s:hue_3[0],
+          \ s:hue_1[0],
+          \ s:mono_2[0],
+          \ s:mono_3[0],
+          \ s:hue_5[0],
+          \ s:hue_4[0],
+          \ s:hue_6_2[0],
+          \ s:hue_2[0],
+          \ s:hue_3[0],
+          \ s:hue_1[0],
+          \ s:syntax_fg[0],
+          \]
+  endif
+  " }}}
+
+
   " Delete functions =========================================================={{{
   " delf <SID>X
   " delf <SID>XAPI
