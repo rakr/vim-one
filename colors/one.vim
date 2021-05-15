@@ -361,7 +361,7 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   call <sid>X('Cursor',       '',              s:syntax_accent,  '')
   call <sid>X('CursorIM',     '',              '',               '')
   call <sid>X('CursorColumn', '',              s:syntax_cursor,  '')
-  call <sid>X('CursorLine',   '',              s:syntax_cursor,  'none')
+  call <sid>X('CursorLine',   '',              s:syntax_cursor,  'underline')
   call <sid>X('Directory',    s:hue_2,         '',               '')
   call <sid>X('ErrorMsg',     s:hue_5,         s:syntax_bg,      'none')
   call <sid>X('VertSplit',    s:syntax_cursor, s:syntax_cursor,  'none')
