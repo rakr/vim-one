@@ -378,7 +378,7 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   call <sid>X('MoreMsg',      s:syntax_fg,     '',               '')
   call <sid>X('NonText',      s:mono_3,        '',               'none')
   call <sid>X('PMenu',        s:syntax_fg,     s:pmenu,          '')
-  call <sid>X('PMenuSel',     s:syntax_fg,     s:pmenu_sel,      '')
+  call <sid>X('PMenuSel',     s:hue_4,         s:pmenu_sel,      '')
   call <sid>X('PMenuSbar',    '',              s:syntax_bg,      '')
   call <sid>X('PMenuThumb',   '',              s:mono_1,         '')
   call <sid>X('Question',     s:hue_2,         '',               '')
