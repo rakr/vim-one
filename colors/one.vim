@@ -308,16 +308,17 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
     let s:hue_6   = ['#d19a66', '173'] " orange 1
     let s:hue_6_2 = ['#e5c07b', '180'] " orange 2
 
-    let s:syntax_bg     = ['#282c34', '16']
+    let s:syntax_bg     = ['#282c34', '232']
     let s:syntax_gutter = ['#636d83', '60']
-    let s:syntax_cursor = ['#2c323c', '16']
+    let s:syntax_cursor = ['#2c323c', '238']
 
     let s:syntax_accent = ['#528bff', '69']
 
-    let s:vertsplit    = ['#181a1f', '233']
+    let s:vertsplit    = ['#181a1f', '238']
     let s:special_grey = ['#3b4048', '16']
     let s:visual_grey  = ['#3e4452', '17']
-    let s:pmenu        = ['#333841', '16']
+    let s:pmenu        = ['#333841', '237']
+    let s:pmenu_sel    = ['#4b5263', '240']
   else
     let s:mono_1 = ['#494b53', '23']
     let s:mono_2 = ['#696c77', '60']
@@ -346,6 +347,7 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
     let s:special_grey = ['#d3d3d3', '251']
     let s:visual_grey  = ['#d0d0d0', '251']
     let s:pmenu        = ['#dfdfdf', '253']
+    let s:pmenu_sel    = ['#c2c2c3', '250']
   endif
 
   let s:syntax_fg = s:mono_1
@@ -375,8 +377,8 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   call <sid>X('ModeMsg',      s:syntax_fg,     '',               '')
   call <sid>X('MoreMsg',      s:syntax_fg,     '',               '')
   call <sid>X('NonText',      s:mono_3,        '',               'none')
-  call <sid>X('PMenu',        '',              s:pmenu,          '')
-  call <sid>X('PMenuSel',     '',              s:mono_4,         '')
+  call <sid>X('PMenu',        s:syntax_fg,     s:pmenu,          '')
+  call <sid>X('PMenuSel',     s:hue_4,         s:pmenu_sel,      '')
   call <sid>X('PMenuSbar',    '',              s:syntax_bg,      '')
   call <sid>X('PMenuThumb',   '',              s:mono_1,         '')
   call <sid>X('Question',     s:hue_2,         '',               '')
