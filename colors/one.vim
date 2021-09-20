@@ -7,6 +7,7 @@
 
 if exists("*<SID>X")
   delf <SID>X
+  delf <SID>XAPI
   delf <SID>rgb
   delf <SID>color
   delf <SID>rgb_color
@@ -28,7 +29,12 @@ if !exists('g:one_allow_italics')
   let g:one_allow_italics = 0
 endif
 
-if has('gui_running') || &t_Co == 88 || &t_Co == 256
+let s:italic = ''
+if g:one_allow_italics == 1
+  let s:italic = 'italic'
+endif
+
+if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   " functions
   " returns an approximate grey index for the given grey level
 
@@ -227,10 +233,10 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   endfun
 
   " sets the highlighting for the given group
-  fun <sid>X(group, fg, bg, attr)
+  fun <SID>XAPI(group, fg, bg, attr)
     let l:attr = a:attr
     if g:one_allow_italics == 0 && l:attr ==? 'italic'
-        let l:attr= 'none'
+      let l:attr= 'none'
     endif
 
     let l:bg = ""
@@ -257,71 +263,95 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
 
   endfun
 
-  "}}}
+  " Highlight function
+  " the original one is borrowed from mhartington/oceanic-next
+  function! <SID>X(group, fg, bg, attr, ...)
+    let l:attrsp = get(a:, 1, "")
+    " fg, bg, attr, attrsp
+    if !empty(a:fg)
+      exec "hi " . a:group . " guifg=" .  a:fg[0]
+      exec "hi " . a:group . " ctermfg=" . a:fg[1]
+    endif
+    if !empty(a:bg)
+      exec "hi " . a:group . " guibg=" .  a:bg[0]
+      exec "hi " . a:group . " ctermbg=" . a:bg[1]
+    endif
+    if a:attr != ""
+      exec "hi " . a:group . " gui=" .   a:attr
+      exec "hi " . a:group . " cterm=" . a:attr
+    endif
+    if !empty(l:attrsp)
+      exec "hi " . a:group . " guisp=" . l:attrsp[0]
+    endif
+  endfunction
+
+  " }}}
 
 
   " Color definition --------------------------------------------------------{{{
+  let s:dark = 0
   if &background ==# 'dark'
-    let s:mono_1 = 'abb2bf'
-    let s:mono_2 = '828997'
-    let s:mono_3 = '5c6370'
-    let s:mono_4 = '4b5263'
+    let s:dark = 1
+    let s:mono_1 = ['#abb2bf', '145']
+    let s:mono_2 = ['#828997', '102']
+    let s:mono_3 = ['#5c6370', '59']
+    let s:mono_4 = ['#4b5263', '59']
 
-    let s:hue_1  = '56b6c2' " cyan
-    let s:hue_2  = '61afef' " blue
-    let s:hue_3  = 'c678dd' " purple
-    let s:hue_4  = '98c379' " green
+    let s:hue_1  = ['#56b6c2', '73'] " cyan
+    let s:hue_2  = ['#61afef', '75'] " blue
+    let s:hue_3  = ['#c678dd', '176'] " purple
+    let s:hue_4  = ['#98c379', '114'] " green
 
-    let s:hue_5   = 'e06c75' " red 1
-    let s:hue_5_2 = 'be5046' " red 2
+    let s:hue_5   = ['#e06c75', '168'] " red 1
+    let s:hue_5_2 = ['#be5046', '130'] " red 2
 
-    let s:hue_6   = 'd19a66' " orange 1
-    let s:hue_6_2 = 'e5c07b' " orange 2
+    let s:hue_6   = ['#d19a66', '173'] " orange 1
+    let s:hue_6_2 = ['#e5c07b', '180'] " orange 2
 
-    let s:syntax_bg     = '282c34'
-    let s:syntax_gutter = '636d83'
-    let s:syntax_cursor = '2c323c'
+    let s:syntax_bg     = ['#161718', '16']
+    let s:syntax_gutter = ['#636d83', '60']
+    let s:syntax_cursor = ['#2c323c', '16']
 
-    let s:syntax_accent = '528bff'
+    let s:syntax_accent = ['#528bff', '69']
 
-    let s:vertsplit    = '181a1f'
-    let s:special_grey = '3b4048'
-    let s:visual_grey  = '3e4452'
-    let s:pmenu        = '333841'
+    let s:vertsplit    = ['#161718', '233']
+    let s:special_grey = ['#3b4048', '16']
+    let s:visual_grey  = ['#3e4452', '17']
+    let s:pmenu        = ['#333841', '16']
   else
-    let s:mono_1 = '494b53'
-    let s:mono_2 = '696c77'
-    let s:mono_3 = 'a0a1a7'
-    let s:mono_4 = 'c2c2c3'
+    let s:mono_1 = ['#494b53', '23']
+    let s:mono_2 = ['#696c77', '60']
+    let s:mono_3 = ['#a0a1a7', '145']
+    let s:mono_4 = ['#c2c2c3', '250']
 
-    let s:hue_1  = '0184bc' " cyan
-    let s:hue_2  = '4078f2' " blue
-    let s:hue_3  = 'a626a4' " purple
-    let s:hue_4  = '50a14f' " green
+    let s:hue_1  = ['#0184bc', '31'] " cyan
+    let s:hue_2  = ['#4078f2', '33'] " blue
+    let s:hue_3  = ['#a626a4', '127'] " purple
+    let s:hue_4  = ['#50a14f', '71'] " green
 
-    let s:hue_5   = 'e45649' " red 1
-    let s:hue_5_2 = 'ca1243' " red 2
+    let s:hue_5   = ['#e45649', '166'] " red 1
+    let s:hue_5_2 = ['#ca1243', '160'] " red 2
 
-    let s:hue_6   = '986801' " orange 1
-    let s:hue_6_2 = 'c18401' " orange 2
+    let s:hue_6   = ['#986801', '94'] " orange 1
+    let s:hue_6_2 = ['#c18401', '136'] " orange 2
 
-    let s:syntax_bg     = 'ffffff'
-    let s:syntax_gutter = '9e9e9e'
-    let s:syntax_cursor = 'f0f0f0'
+    let s:syntax_bg     = ['#fafafa', '255']
+    let s:syntax_gutter = ['#9e9e9e', '247']
+    let s:syntax_cursor = ['#f0f0f0', '254']
 
-    let s:syntax_accent = '526fff'
-    let s:syntax_accent_2 = '0083be'
+    let s:syntax_accent = ['#526fff', '63']
+    let s:syntax_accent_2 = ['#0083be', '31']
 
-    let s:vertsplit    = 'e7e9e1'
-    let s:special_grey = 'd3d3d3'
-    let s:visual_grey  = 'd0d0d0'
-    let s:pmenu        = 'dfdfdf'
+    let s:vertsplit    = ['#e7e9e1', '188']
+    let s:special_grey = ['#d3d3d3', '251']
+    let s:visual_grey  = ['#d0d0d0', '251']
+    let s:pmenu        = ['#dfdfdf', '253']
   endif
 
   let s:syntax_fg = s:mono_1
   let s:syntax_fold_bg = s:mono_3
 
-  "}}}
+  " }}}
 
   " Vim editor color --------------------------------------------------------{{{
   call <sid>X('Normal',       s:syntax_fg,     s:syntax_bg,      '')
@@ -334,14 +364,14 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('CursorLine',   '',              s:syntax_cursor,  'none')
   call <sid>X('Directory',    s:hue_2,         '',               '')
   call <sid>X('ErrorMsg',     s:hue_5,         s:syntax_bg,      'none')
-  call <sid>X('VertSplit',    s:vertsplit,     '',               'none')
-  call <sid>X('Folded',       s:syntax_bg,     s:syntax_fold_bg, 'none')
+  call <sid>X('VertSplit',    s:syntax_cursor, s:syntax_cursor,  'none')
+  call <sid>X('Folded',       s:syntax_fg,     s:syntax_bg,      'none')
   call <sid>X('FoldColumn',   s:mono_3,        s:syntax_cursor,  '')
   call <sid>X('IncSearch',    s:hue_6,         '',               '')
   call <sid>X('LineNr',       s:mono_4,        '',               '')
   call <sid>X('CursorLineNr', s:syntax_fg,     s:syntax_cursor,  'none')
   call <sid>X('MatchParen',   s:hue_5,         s:syntax_cursor,  'underline,bold')
-  call <sid>X('Italic',       '',              '',               'italic')
+  call <sid>X('Italic',       '',              '',               s:italic)
   call <sid>X('ModeMsg',      s:syntax_fg,     '',               '')
   call <sid>X('MoreMsg',      s:syntax_fg,     '',               '')
   call <sid>X('NonText',      s:mono_3,        '',               'none')
@@ -352,9 +382,10 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('Question',     s:hue_2,         '',               '')
   call <sid>X('Search',       s:syntax_bg,     s:hue_6_2,        '')
   call <sid>X('SpecialKey',   s:special_grey,  '',               'none')
+  call <sid>X('Whitespace',   s:special_grey,  '',               'none')
   call <sid>X('StatusLine',   s:syntax_fg,     s:syntax_cursor,  'none')
   call <sid>X('StatusLineNC', s:mono_3,        '',               '')
-  call <sid>X('TabLine',      s:mono_1,        s:syntax_bg,      '')
+  call <sid>X('TabLine',      s:mono_2,        s:visual_grey,    'none')
   call <sid>X('TabLineFill',  s:mono_3,        s:visual_grey,    'none')
   call <sid>X('TabLineSel',   s:syntax_bg,     s:hue_2,          '')
   call <sid>X('Title',        s:syntax_fg,     '',               'bold')
@@ -375,7 +406,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   " }}}
 
   " Standard syntax highlighting --------------------------------------------{{{
-  call <sid>X('Comment',        s:mono_3,        '',          'italic')
+  call <sid>X('Comment',        s:mono_3,        '',          s:italic)
   call <sid>X('Constant',       s:hue_4,         '',          '')
   call <sid>X('String',         s:hue_4,         '',          '')
   call <sid>X('Character',      s:hue_4,         '',          '')
@@ -406,7 +437,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('Delimiter',      '',              '',          '')
   call <sid>X('SpecialComment', '',              '',          '')
   call <sid>X('Debug',          '',              '',          '')
-  call <sid>X('Underlined',     '',              '',          '')
+  call <sid>X('Underlined',     '',              '',          'underline')
   call <sid>X('Ignore',         '',              '',          '')
   call <sid>X('Error',          s:hue_5,         s:syntax_bg, 'bold')
   call <sid>X('Todo',           s:hue_3,         s:syntax_bg, '')
@@ -438,8 +469,6 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('cStructure',         s:hue_3,  '', '')
   call <sid>X('cOperator',          s:hue_3,  '', '')
   call <sid>X('cStatement',         s:hue_3,  '', '')
-  call <sid>X('cCommentL',          s:mono_3, '', '')
-  call <sid>X('cComment',           s:mono_3, '', '')
   call <sid>X('cTODO',              s:hue_3,  '', '')
   call <sid>X('cConstant',          s:hue_6,  '', '')
   call <sid>X('cSpecial',           s:hue_1,  '', '')
@@ -520,6 +549,8 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('elixirAtom',              s:hue_1,   '', '')
   call <sid>X('elixirBlockDefinition',   s:hue_3,   '', '')
   call <sid>X('elixirModuleDeclaration', s:hue_6,   '', '')
+  call <sid>X('elixirInclude',           s:hue_5,   '', '')
+  call <sid>X('elixirOperator',          s:hue_6,   '', '')
   " }}}
 
   " Git and git related plugins highlighting --------------------------------{{{
@@ -561,6 +592,19 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('goUnsignedInts',        s:hue_1, '', '')
   " }}}
 
+  " Haskell highlighting ----------------------------------------------------{{{
+  call <sid>X('haskellDeclKeyword',    s:hue_2, '', '')
+  call <sid>X('haskellType',           s:hue_4, '', '')
+  call <sid>X('haskellWhere',          s:hue_5, '', '')
+  call <sid>X('haskellImportKeywords', s:hue_2, '', '')
+  call <sid>X('haskellOperators',      s:hue_5, '', '')
+  call <sid>X('haskellDelimiter',      s:hue_2, '', '')
+  call <sid>X('haskellIdentifier',     s:hue_6, '', '')
+  call <sid>X('haskellKeyword',        s:hue_5, '', '')
+  call <sid>X('haskellNumber',         s:hue_1, '', '')
+  call <sid>X('haskellString',         s:hue_1, '', '')
+  "}}}
+
   " HTML highlighting -------------------------------------------------------{{{
   call <sid>X('htmlArg',            s:hue_6,  '', '')
   call <sid>X('htmlTagName',        s:hue_5,  '', '')
@@ -569,7 +613,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('htmlTag',            s:mono_2, '', '')
   call <sid>X('htmlEndTag',         s:mono_2, '', '')
 
-  call <sid>X('MatchTag',   s:hue_5,         s:syntax_cursor,  'underline,bold')
+  call <sid>X('MatchTag', s:hue_5, s:syntax_cursor, 'underline,bold')
   " }}}
 
   " JavaScript highlighting -------------------------------------------------{{{
@@ -607,6 +651,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('jsUndefined',            s:hue_6,   '', '')
   call <sid>X('jsObjectValue',          s:hue_2,   '', '')
   call <sid>X('jsObjectKey',            s:hue_1,   '', '')
+  call <sid>X('jsReturn',               s:hue_3,   '', '')
   " https://github.com/othree/yajs.vim
   call <sid>X('javascriptArrowFunc',    s:hue_3,   '', '')
   call <sid>X('javascriptClassExtends', s:hue_3,   '', '')
@@ -637,6 +682,8 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('jsonNoQuotesError',        s:hue_5,   '', 'reverse' )
   call <sid>X('jsonNumError',             s:hue_5,   '', 'reverse' )
   call <sid>X('jsonString',               s:hue_4,   '', ''        )
+  call <sid>X('jsonBoolean',              s:hue_3,   '', ''        )
+  call <sid>X('jsonNumber',               s:hue_6,   '', ''        )
   call <sid>X('jsonStringSQError',        s:hue_5,   '', 'reverse' )
   call <sid>X('jsonSemicolonError',       s:hue_5,   '', 'reverse' )
   " }}}
@@ -659,6 +706,17 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('markdownListMarker',       s:hue_5,   '', '')
   " }}}
 
+  " Perl highlighting -------------------------------------------------------{{{
+  call <sid>X('perlFunction',      s:hue_3,     '', '')
+  call <sid>X('perlMethod',        s:syntax_fg, '', '')
+  call <sid>X('perlPackageConst',  s:hue_3,     '', '')
+  call <sid>X('perlPOD',           s:mono_3,    '', '')
+  call <sid>X('perlSubName',       s:syntax_fg, '', '')
+  call <sid>X('perlSharpBang',     s:mono_3,    '', '')
+  call <sid>X('perlSpecialString', s:hue_4,     '', '')
+  call <sid>X('perlVarPlain',      s:hue_2,     '', '')
+  call <sid>X('podCommand',        s:mono_3,    '', '')
+
   " PHP highlighting --------------------------------------------------------{{{
   call <sid>X('phpClass',        s:hue_6_2, '', '')
   call <sid>X('phpFunction',     s:hue_2,   '', '')
@@ -673,7 +731,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   " Pug (Formerly Jade) highlighting ----------------------------------------{{{
   call <sid>X('pugAttributesDelimiter',   s:hue_6,    '', '')
   call <sid>X('pugClass',                 s:hue_6,    '', '')
-  call <sid>X('pugDocType',               s:mono_3,   '', 'italic')
+  call <sid>X('pugDocType',               s:mono_3,   '', s:italic)
   call <sid>X('pugTag',                   s:hue_5,    '', '')
   " }}}
 
@@ -693,7 +751,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('pythonStatement',            s:hue_3,     '', '')
   call <sid>X('pythonParam',                s:hue_6,     '', '')
   call <sid>X('pythonEscape',               s:hue_5,     '', '')
-  call <sid>X('pythonSelf',                 s:mono_2,    '', 'italic')
+  call <sid>X('pythonSelf',                 s:mono_2,    '', s:italic)
   call <sid>X('pythonClass',                s:hue_2,     '', '')
   call <sid>X('pythonOperator',             s:hue_3,     '', '')
   call <sid>X('pythonEscape',               s:hue_5,     '', '')
@@ -743,7 +801,7 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('vimFunction',     s:hue_1,  '', '')
   call <sid>X('vimFuncName',     s:hue_3,  '', '')
   call <sid>X('vimHighlight',    s:hue_2,  '', '')
-  call <sid>X('vimLineComment',  s:mono_3, '', 'italic')
+  call <sid>X('vimLineComment',  s:mono_3, '', s:italic)
   call <sid>X('vimParenSep',     s:mono_2, '', '')
   call <sid>X('vimSep',          s:mono_2, '', '')
   call <sid>X('vimUserFunc',     s:hue_1,  '', '')
@@ -787,8 +845,18 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   call <sid>X('manFooter', s:mono_3, '', '')
   " }}}
 
+  " ALE (Asynchronous Lint Engine) highlighting -----------------------------{{{
+  call <sid>X('ALEWarningSign', s:hue_6_2, '', '')
+  call <sid>X('ALEErrorSign', s:hue_5,   '', '')
+
+
+   " Neovim NERDTree Background fix ------------------------------------------{{{
+  call <sid>X('NERDTreeFile', s:syntax_fg, '', '')
+  " }}}
+
   " Delete functions =========================================================={{{
   " delf <SID>X
+  " delf <SID>XAPI
   " delf <SID>rgb
   " delf <SID>color
   " delf <SID>rgb_color
@@ -797,14 +865,19 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
   " delf <SID>grey_color
   " delf <SID>grey_level
   " delf <SID>grey_number
-  "}}}
+  " }}}
 
 endif
 "}}}
-  " Public API --------------------------------------------------------------{{{
-  function! one#highlight(group, fg, bg, attr)
-    call <sid>X(a:group, a:fg, a:bg, a:attr)
-  endfunction
-  "}}}
+
+" Public API --------------------------------------------------------------{{{
+function! one#highlight(group, fg, bg, attr)
+  call <sid>XAPI(a:group, a:fg, a:bg, a:attr)
+endfunction
+"}}}
+
+if exists('s:dark') && s:dark
+  set background=dark
+endif
 
 " vim: set fdl=0 fdm=marker:

@@ -49,7 +49,7 @@ nnoremap <leader>hi :so $VIMRUNTIME/syntax/hitest.vim<cr>
 ```
 
 The first one `<leader>ii` displays the name of the hightlight the cursor is
-one.
+on.
 The second one `<leader>hi` lists all the highlights that are defined, bear in
 mind that syntaxes are loaded dynamically by Vim.
 
