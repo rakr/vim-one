@@ -19,6 +19,9 @@ if exists("*<SID>X")
 endif
 
 hi clear
+if has('nvim-0.10')
+  runtime colors/vim.lua
+endif
 syntax reset
 if exists('g:colors_name')
   unlet g:colors_name
